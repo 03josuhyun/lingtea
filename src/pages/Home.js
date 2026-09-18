@@ -56,7 +56,7 @@ export default function Home() {
               return (
                 <div className="bestItem" key={product.id}>
                   <div className="bestImg">
-                    <img src={process.env.PUBLIC_URL + product.image} alt={product.title} />
+                    <img src={product.image} alt={product.title} />
                     <button className='cartbtn'>
                       <img src={process.env.PUBLIC_URL + '/assets/btncart.png'} alt="" />
                     </button>
@@ -301,7 +301,7 @@ export default function Home() {
                 return (
                   <div className="eventItem" key={event.id}>
                     <div className="eventImg">
-                      <img src={process.env.PUBLIC_URL + event.image} alt={event.name} />
+                      <img src={event.image} alt={event.name} />
                     </div>
                     <p className='eventName'>{event.name}</p>
                     <span className='eventDay'>{event.day}</span>
