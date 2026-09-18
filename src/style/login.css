@@ -1,0 +1,94 @@
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .loginSection {
+      width: 1280px;
+      margin: 0 auto;
+      padding: 190px 180px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .loginSection .loginBox {
+      width: 430px;
+    }
+    .loginSection .loginBox .loginTop .login {
+      display: inline-block;
+      width: 100%; height: 60px;
+      font-size: 20px;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      margin-top: 20px;
+    }
+    .loginSection .loginBox .loginTop .loginchk {
+      display: flex;
+      justify-content: right;
+      margin-top: 10px;
+    }
+    .loginSection .loginBox .loginTop .loginchk label{
+      font-size: 14px;
+      margin: 0 10px;
+    }
+    .loginSection .loginBox .loginMid {
+      margin-top: 20px;
+    }
+    .loginSection .loginBox .loginMid button {
+      width: 430px;
+      display: inline-block;
+      font-size: 22px;
+      padding: 5px 0;
+      margin: 10px 0;
+      border: none;
+      border-radius: 20px;
+    }
+    .loginSection .loginBox .loginMid .login_btn {
+      background-color: #008BE5;
+      color: white;
+    }
+    .loginSection .loginBox .loginMid .loginadd_btn {
+      background-color: white;
+      color: #777;
+      border: 1px solid #777;
+    }
+    .loginSection .loginBox .loginBot {
+      margin-top: 20px;
+    }
+    .loginSection .loginBox .loginBot button {
+      width: 430px;
+      display: inline-block;
+      padding: 5px 0;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: none;
+      font-size: 20px;
+    }
+    .loginSection .loginBox .loginBot .login_k {
+      background-color: #FDE101;
+    }
+    .loginSection .loginBox .loginBot .login_k img {
+      margin-bottom: 4px;
+      margin-right: 3px;
+    }
+    .loginSection .loginBox .loginBot .login_n {
+      background-color: white;
+      border: 1px solid #777;
+    }
+    .loginSection .loginBox .loginBot .login_n img {
+      margin-bottom: 5px;
+      margin-right: 3px;
+    }

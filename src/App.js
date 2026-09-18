@@ -3,7 +3,7 @@ import './App.css';
 
 import { Button, Container, Form, Nav, Navbar, Offcanvas } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate , useLocation} from 'react-router-dom';
 //import { useState } from 'react';
 //import productDate from './data/productDate';
 
@@ -14,11 +14,12 @@ import Cart from './pages/Cart';
 import Event from './pages/Event';
 import Best from './pages/Best';
 import Brand from './pages/Brand';
-//import Login from './pages/Login';
+import Login from './pages/Login';
 
 function App() {
 
   const navigate = useNavigate();
+  const location = useLocation();
   return (
     <div className="App">
 
@@ -40,11 +41,27 @@ function App() {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="gnb">
-                <Nav.Link className='lnb lnb01' onClick={() => { navigate('/home') }}>홈</Nav.Link>
-                <Nav.Link className='lnb lnb02' onClick={() => { navigate('/brand') }}>브랜드</Nav.Link>
-                <Nav.Link className='lnb lnb03' onClick={() => { navigate('/product') }}>전체제품</Nav.Link>
-                <Nav.Link className='lnb lnb04' onClick={() => { navigate('/best') }}>Best</Nav.Link>
-                <Nav.Link className='lnb lnb05' onClick={() => { navigate('/event') }}>이벤트</Nav.Link>
+                <Nav.Link
+                  className={`lnb lnb01 ${location.pathname === '/home' ? 'active' : ''}`}
+                  onClick={() => {navigate('/home') }}
+                >홈</Nav.Link>
+                <Nav.Link
+                  className={`lnb lnb01 ${location.pathname === '/brand' ? 'active' : ''}`}
+                  onClick={() => {navigate('/brand') }}
+                >브랜드</Nav.Link>
+                <Nav.Link
+                  className={`lnb lnb01 ${location.pathname === '/product' ? 'active' : ''}`}
+                  onClick={() => { navigate('/product') }}
+                >전체제품</Nav.Link>
+                <Nav.Link
+                  className={`lnb lnb01 ${location.pathname === '/best' ? 'active' : ''}`}
+                  onClick={() => { navigate('/best') }}
+                >
+                  Best</Nav.Link>
+                <Nav.Link
+                  className={`lnb lnb01 ${location.pathname === '/event' ? 'active' : ''}`}
+                  onClick={() => { navigate('/event') }}
+                >이벤트</Nav.Link>
               </Nav>
               <Form className="d-flex">
                 <Form.Control
@@ -55,11 +72,11 @@ function App() {
                 />
                 <Button variant="outline-success">Search</Button>
               </Form>
-              <button className='loginbtn'>
-                <img src="/assets/loginbtn.png" alt="" />
+              <button className='loginbtn' onClick={() => navigate('/login')}>
+                <img src={process.env.PUBLIC_URL + '/assets/loginbtn.png'} alt="" />
               </button>
-              <button className='cartbtn'>
-                <img src="/assets/cartbtn.png" alt="" />
+              <button className='cartbtn' onClick={() => navigate('/cart')}>
+                <img src={process.env.PUBLIC_URL + '/assets/cartbtn.png'} alt="" />
               </button>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
@@ -73,6 +90,8 @@ function App() {
         <Route path='cart' element={<Cart />} />
         <Route path='event' element={<Event />} />
         <Route path='best' element={<Best />} />
+        <Route path='login' element={<Login />} />
+        <Route path='cart' element={<Cart />} />
       </Routes>
 
       <div className="footer">

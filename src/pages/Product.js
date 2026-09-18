@@ -8,26 +8,28 @@ import { useState } from 'react';
 
 export default function Product() {
 
-  const { data } = productDate;
-  const [activeTab, setActiveTab] = useState('origainal');const [sort, setSort] = useState('default');
-  const filteredProducts = data.filter(
-    (product) => product.category.includes(activeTab)
-  );
+  const { data, allProduct } = productDate;
+  const [activeTab, setActiveTab] = useState('all');
+  const [sort, setSort] = useState('default');
+  const currentTopImg = allProduct.find(
+    (item) => item.id === activeTab
+  )?.topImg.image;
+  const filteredProducts =
+    activeTab === 'all' ? data : data.filter((product) => product.category?.includes(activeTab));
 
   let sortedProducts = filteredProducts;
 
-  if (sort === 'best') {
-    sortedProducts = filteredProducts.filter(
-      (product) => product.isBest
+  if (sort === 'popular') {
+    sortedProducts = [...filteredProducts].sort(
+      (a, b) => b.viewCount - a.viewCount
+    );
+  }
+  if (sort === 'new') {
+    sortedProducts = [...filteredProducts].sort(
+      (a, b) => new Date(b.newDate) - new Date(a.newDate)
     );
   }
 
-  if (sort === 'new') {
-    sortedProducts = filteredProducts.filter(
-      (product) => product.isNew
-    );
-  }
-  
   return (
     <div>
       <div className="allSection">
@@ -37,7 +39,7 @@ export default function Product() {
           <span>전 제품</span>
         </div>
         <div className="alltopImg">
-          <img src={process.env.PUBLIC_URL + ''} alt="" />
+          <img src={currentTopImg} alt="" />
         </div>
         <div className="allBox">
           <div className="allTitle">
@@ -117,18 +119,18 @@ export default function Product() {
           </div>
           <div className="allItemNum">
             <p>
-              총 <span>49</span>개의 상품이 있습니다
+              총 <span>{sortedProducts.length}</span>개의 상품이 있습니다
             </p>
-            <select value={sort} onClick={(e) => setSort(e.target.value)}>
+            <select value={sort} onChange={(e) => setSort(e.target.value)}>
               <option value="default">정렬방식</option>
               <option value="new">신상품</option>
-              <option value="best">인기상품</option>
+              <option value="popular">인기상품</option>
             </select>
           </div>
           <hr />
           <div className="sheet">
             {
-              filteredProducts.map((product) => (
+              sortedProducts.map((product) => (
                 <div className="sheetItem" key={product.id}>
                   <img src={product.image} alt={product.title} />
                   <button className='cartbtn'>

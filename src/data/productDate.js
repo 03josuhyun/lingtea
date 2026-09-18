@@ -10,7 +10,11 @@ const data = [
     category: 'origainal',
 
     isBest: true,
-    isNew: false,
+    isNew: true,
+
+    newDate: '2024-09-01',
+
+    viewCount : 1250
   },
   {
     id: 'product02',
@@ -22,8 +26,12 @@ const data = [
     pricedetail: '52% / 박스당 16,800원',
     category: 'collagen',
 
-    isBest: false,
-    isNew: false,
+    isBest: true,
+    isNew: true,
+
+    newDate: '2024-09-10',
+
+    viewCount : 1210
   },
   {
     id: 'product03',
@@ -36,7 +44,11 @@ const data = [
     category: 'dot',
 
     isBest: true,
-    isNew: false,
+    isNew: true,
+
+    newDate: '2024-09-22',
+
+    viewCount : 1130
   },
   {
     id: 'product04',
@@ -49,7 +61,11 @@ const data = [
     category: 'origainal',
 
     isBest: true,
-    isNew: false,
+    isNew: true,
+
+    newDate: '2024-09-20',
+
+    viewCount : 1230
   },
   {
     id: 'product05',
@@ -61,8 +77,10 @@ const data = [
     pricedetail: '14% / 박스당 27,250원 ~ ',
     category: 'dot',
 
-    isBest: true,
+    isBest: false,
     isNew: false,
+
+    viewCount : 1140
   },
   {
     id: 'product06',
@@ -74,8 +92,12 @@ const data = [
     pricedetail: '60% / 박스당 15900원',
     category: 'passmate',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2024-12-15',
+
+    viewCount : 1020
   },
   {
     id: 'product07',
@@ -87,8 +109,10 @@ const data = [
     pricedetail: '46% / 박스당 165000원',
     category: 'ringtiI',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2024-10-15',
   },
   {
     id: 'product08',
@@ -101,7 +125,11 @@ const data = [
     category: 'ringtiI',
 
     isBest: true,
-    isNew: false,
+    isNew: true,
+
+    newDate: '2024-09-24',
+
+    viewCount : 1170
   },
   {
     id: 'product09',
@@ -114,7 +142,11 @@ const data = [
     category: 'gosotin',
 
     isBest: true,
-    isNew: false,
+    isNew: true,
+
+    newDate: '2024-09-14',
+
+    viewCount : 1200
   },
   {
     id: 'product10',
@@ -127,7 +159,11 @@ const data = [
     category: 'gosotin',
 
     isBest: true,
-    isNew: false,
+    isNew: true,
+
+    newDate: '2024-10-17',
+
+    viewCount : 1060
   },
   {
     id: 'product11',
@@ -139,8 +175,12 @@ const data = [
     pricedetail: '17% / 박스당 23,000원',
     category: 'gosomil',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2024-10-20',
+
+    viewCount : 940
   },
   {
     id: 'product12',
@@ -153,7 +193,11 @@ const data = [
     category: 'light',
 
     isBest: true,
-    isNew: false,
+    isNew: true,
+
+    newDate: '2024-10-28',
+
+    viewCount : 1000
   },
   {
     id: 'product13',
@@ -166,7 +210,11 @@ const data = [
     category: 'focus',
 
     isBest: true,
-    isNew: false,
+    isNew: true,
+
+    newDate: '2024-09-16',
+
+    viewCount : 1110
   },
   {
     id: 'product14',
@@ -180,6 +228,8 @@ const data = [
 
     isBest: true,
     isNew: false,
+
+    viewCount : 1080
   },
   {
     id: 'product15',
@@ -191,8 +241,12 @@ const data = [
     pricedetail: '43% / 박스당 11,500원',
     category: 'impact',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2024-09-08',
+
+    viewCount : 1030
   },
   {
     id: 'product16',
@@ -205,7 +259,11 @@ const data = [
     category: 'collagen',
 
     isBest: true,
-    isNew: false,
+    isNew: true,
+
+    newDate: '2024-09-12',
+    
+    viewCount : 1120
   },
   {
     id: 'product17',
@@ -219,6 +277,8 @@ const data = [
 
     isBest: true,
     isNew: false,
+
+    viewCount : 1190
   },
   {
     id: 'product18',
@@ -230,8 +290,12 @@ const data = [
     pricedetail: '26% / 박스당 32,450원 ~ ',
     category: 'allcare',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2024-11-22',
+
+    viewCount : 1150
   },
   {
     id: 'product19',
@@ -244,7 +308,9 @@ const data = [
     category: 'allcare',
 
     isBest: true,
-    isNew: false,
+    isNew: true,
+
+    newDate: '2024-11-24',
   },
   {
     id: 'product20',
@@ -256,8 +322,12 @@ const data = [
     pricedetail: '33% / 박스당 39,667원 ~ ',
     category: 'allcare',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2024-11-26',
+
+    viewCount : 1010
   },
   {
     id: 'product21',
@@ -269,8 +339,12 @@ const data = [
     pricedetail: '58% / 박스당 1,330원',
     category: 'lemonapple',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2024-12-05',
+
+    viewCount : 960
   },
   {
     id: 'product22',
@@ -283,7 +357,9 @@ const data = [
     category: 'terathy',
 
     isBest: true,
-    isNew: false,
+    isNew: true,
+
+    newDate: '2024-11-30',
   },
   {
     id: 'product23',
@@ -296,7 +372,11 @@ const data = [
     category: 'nightie',
 
     isBest: true,
-    isNew: false,
+    isNew: true,
+
+    newDate: '2024-12-22',
+
+    viewCount : 1180
   },
   {
     id: 'product24',
@@ -308,8 +388,12 @@ const data = [
     pricedetail: '43% / 박스당 1,650원',
     category: 'nightie',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2024-12-23',
+
+    viewCount : 1070
   },
   {
     id: 'product25',
@@ -321,8 +405,12 @@ const data = [
     pricedetail: '',
     category: 'bottle',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2024-12-04',
+
+    viewCount : 1160
   },
   {
     id: 'product26',
@@ -334,8 +422,10 @@ const data = [
     pricedetail: '',
     category: 'bottle',
 
-    isBest: true,
+    isBest: false,
     isNew: false,
+
+    viewCount : 880
   },
   {
     id: 'product27',
@@ -347,8 +437,12 @@ const data = [
     pricedetail: '55%',
     category: 'bottle',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2024-09-04',
+
+    viewCount : 1240,
   },
   {
     id: 'product28',
@@ -360,8 +454,12 @@ const data = [
     pricedetail: '61%',
     category: 'bottle',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2024-09-09',
+
+    viewCount : 930
   },
   {
     id: 'product29',
@@ -373,8 +471,12 @@ const data = [
     pricedetail: '50%',
     category: ['ringtiI', 'bottle'],
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2024-10-08',
+    
+    viewCount : 1220
   },
   {
     id: 'product30',
@@ -386,8 +488,10 @@ const data = [
     pricedetail: '62%',
     category: ['gosotin', 'bottle'],
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2024-09-10'
   },
   {
     id: 'product31',
@@ -399,8 +503,12 @@ const data = [
     pricedetail: '58%',
     category: ['light', 'bottle'],
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2024-11-06',
+
+    viewCount : 910
   },
   {
     id: 'product32',
@@ -412,8 +520,12 @@ const data = [
     pricedetail: '17%',
     category: 'bottle',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2024-11-05',
+
+    viewCount : 900
   },
   {
     id: 'product33',
@@ -425,8 +537,12 @@ const data = [
     pricedetail: '61% / 병당 1,248원',
     category: 'lemonapple',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2025-01-05',
+
+    viewCount : 1040
   },
   {
     id: 'product34',
@@ -438,8 +554,12 @@ const data = [
     pricedetail: '48% / 박스당 17,950원',
     category: 'terathy',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2025-01-30',
+
+    viewCount : 1090
   },
   {
     id: 'product35',
@@ -451,8 +571,10 @@ const data = [
     pricedetail: '55% / 병당 2,242원',
     category: 'recoverygear',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2025-02-21',
   },
   {
     id: 'product36',
@@ -464,8 +586,12 @@ const data = [
     pricedetail: '55% / 병당 2,242원',
     category: 'recoverygear',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2025-02-20',
+
+    viewCount : 890
   },
   {
     id: 'product37',
@@ -477,8 +603,12 @@ const data = [
     pricedetail: '59% / 병당 1,163원',
     category: 'recoverygear',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2025-02-22',
+
+    viewCount : 980
   },
   {
     id: 'product38',
@@ -490,8 +620,10 @@ const data = [
     pricedetail: '59% / 박스당 1,163원',
     category: 'recoverygear',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2025-02-23',
   },
   {
     id: 'product39',
@@ -503,8 +635,12 @@ const data = [
     pricedetail: '45% / 병당 1,575원',
     category: 'nightie',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2025-03-20',
+
+    viewCount : 1100
   },
   {
     id: 'product40',
@@ -516,8 +652,12 @@ const data = [
     pricedetail: '43% / 박스당 14,950원 ~ ',
     category: 'dext',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2025-04-07',
+
+    viewCount : 950
   },
   {
     id: 'product41',
@@ -529,8 +669,12 @@ const data = [
     pricedetail: '40% / 박스당 16,980원 ~ ',
     category: 'ceylon',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2024-11-13',
+
+    viewCount : 970
   },
   {
     id: 'product42',
@@ -556,7 +700,11 @@ const data = [
     category: 'lemonapple',
 
     isBest: true,
-    isNew: false,
+    isNew: true,
+
+    newDate: '2024-11-18',
+
+    viewCount : 920
   },
   {
     id: 'product44',
@@ -568,8 +716,12 @@ const data = [
     pricedetail: '49% / 병당 1,100원 ~ ',
     category: 'morningtea',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2025-05-25',
+
+    viewCount : 990
   },
   {
     id: 'product45',
@@ -581,8 +733,10 @@ const data = [
     pricedetail: '25% / 박스당 13,834원 ~ ',
     category: 'gosomil',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2025-06-01',
   },
   {
     id: 'product46',
@@ -594,8 +748,12 @@ const data = [
     pricedetail: '10% / 박스당 22,375원 ~ ',
     category: 'activepro',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2025-07-05',
+
+    viewCount : 900
   },
   {
     id: 'product47',
@@ -607,8 +765,12 @@ const data = [
     pricedetail: '45%',
     category: 'origainal',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2025-07-16',
+
+    viewCount : 1050
   },
   {
     id: 'product48',
@@ -620,8 +782,12 @@ const data = [
     pricedetail: '57% / 박스당 1,225원 ~ ',
     category: ['nightie', 'morningtea'],
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2025-09-20',
+
+    viewCount : 870
   },
   {
     id: 'product49',
@@ -633,8 +799,10 @@ const data = [
     pricedetail: '68% / 박스당 11,225원 ~ ',
     category: 'passmate',
 
-    isBest: true,
-    isNew: false,
+    isBest: false,
+    isNew: true,
+
+    newDate: '2025-10-27',
   },
   {
     id: 'product50',
@@ -646,7 +814,7 @@ const data = [
     pricedetail: '67% / ID당 1개 구매 가능',
     category: 'origainal',
 
-    isBest: true,
+    isBest: false,
     isNew: false,
   },
   {
@@ -659,7 +827,7 @@ const data = [
     pricedetail: '67% / ID당 1개 구매 가능',
     category: 'origainal',
 
-    isBest: true,
+    isBest: false,
     isNew: false,
   },
   {
@@ -672,7 +840,7 @@ const data = [
     pricedetail: '67% / ID당 1개 구매 가능',
     category: 'origainal',
 
-    isBest: true,
+    isBest: false,
     isNew: false,
   },
   {
@@ -685,7 +853,7 @@ const data = [
     pricedetail: '로그인 후 ID당 1개 구매 가능',
     category: 'ceylon',
 
-    isBest: true,
+    isBest: false,
     isNew: false,
   },
   {
@@ -698,7 +866,7 @@ const data = [
     pricedetail: '68% / ID당 1개 구매 가능',
     category: 'collagen',
 
-    isBest: true,
+    isBest: false,
     isNew: false,
   },
   {
@@ -711,7 +879,7 @@ const data = [
     pricedetail: '68% / ID당 1개 구매 가능',
     category: 'dot',
 
-    isBest: true,
+    isBest: false,
     isNew: false,
   },
   {
@@ -724,7 +892,7 @@ const data = [
     pricedetail: '63% / ID당 1개 구매 가능',
     category: 'gosotin',
 
-    isBest: true,
+    isBest: false,
     isNew: false,
   },
   {
@@ -737,7 +905,7 @@ const data = [
     pricedetail: '55% / ID당 1개 구매 가능',
     category: 'focus',
 
-    isBest: true,
+    isBest: false,
     isNew: false,
   },
   {
@@ -750,7 +918,7 @@ const data = [
     pricedetail: '60% / ID당 1개 구매 가능',
     category: 'light',
 
-    isBest: true,
+    isBest: false,
     isNew: false,
   },
   {
@@ -763,7 +931,7 @@ const data = [
     pricedetail: '50% / ID당 1개 구매 가능',
     category: 'dext',
 
-    isBest: true,
+    isBest: false,
     isNew: false,
   },
   {
@@ -776,7 +944,7 @@ const data = [
     pricedetail: '',
     category: 'pharmacy',
 
-    isBest: true,
+    isBest: false,
     isNew: false,
   },
   {
@@ -789,7 +957,7 @@ const data = [
     pricedetail: '',
     category: 'pharmacy',
 
-    isBest: true,
+    isBest: false,
     isNew: false,
   },
   {
@@ -802,7 +970,7 @@ const data = [
     pricedetail: '',
     category: 'pharmacy',
 
-    isBest: true,
+    isBest: false,
     isNew: false,
   },
   {
@@ -815,7 +983,7 @@ const data = [
     pricedetail: '',
     category: 'pharmacy',
 
-    isBest: true,
+    isBest: false,
     isNew: false,
   },
 
@@ -1000,129 +1168,152 @@ const eventInfo = [
   },
   {
     id: 'event08',
-    image: process.env.PUBLIC_URL + '/assets/event/event08.jpg',
+    image: process.env.PUBLIC_URL + '/assets/event/event08.jpeg',
     name: '마케팅 수신 동의하고 적립금 받으세요!',
     day: '22.8.2(화) ~ 이벤트 종료 시까지'
   }
 ]
 
-const allProduct = {
-  AllItem: {
+const allProduct = [
+  {
+    id: 'all',
     topImg: {
       image: process.env.PUBLIC_URL + '/assets/allItem/allItem01.jpg'
     },
   },
-  Lingteaoriginal: {
+  {
+    id: 'origainal',
     topImg: {
       image: process.env.PUBLIC_URL + '/assets/allItem/allItem03.jpg'
     },
   },
-  Cafeceylon: {
+  {
+    id: 'ceylon',
     topImg: {
       image: process.env.PUBLIC_URL + '/assets/allItem/allItem04.jpg'
     },
   },
-  Hydracollagen: {
+  {
+    id: 'collagen',
     topImg: {
       image: process.env.PUBLIC_URL + '/assets/allItem/allItem05.jpg'
     },
   },
-  Dot_t: {
+  {
+    id: 'dot',
     topImg: {
       image: process.env.PUBLIC_URL + '/assets/allItem/allItem06.jpg'
     },
   },
-  Activepro: {
+  {
+    id: 'activepro',
     topImg: {
       image: ''
     },
   },
-  Terathy: {
+  {
+    id:'terathy',
     topImg: {
       image: process.env.PUBLIC_URL + '/assets/allItem/allItem07.jpg'
     },
   },
-  Nightie: {
+  {
+    id: 'nightie',
     topImg: {
       image: process.env.PUBLIC_URL + '/assets/allItem/allItem08.jpg'
     },
   },
-  Morningtea: {
+  {
+    id: 'morningtea',
     topImg: {
       image: process.env.PUBLIC_URL + '/assets/allItem/allItem09.jpg'
     },
   },
-  Ringti_I: {
+  {
+    id: 'ringtiI',
     topImg: {
-      image: process.env.PUBLIC_URL + '/assets/allItem/allItem10 .jpg'
+      image: process.env.PUBLIC_URL + '/assets/allItem/allItem10.jpg'
     },
   },
-  All_care: {
+  {
+    id: 'allcare',
     topImg: {
       image: process.env.PUBLIC_URL + '/assets/allItem/allItem11.jpg'
     },
   },
-  Passmate: {
+  {
+    id: 'passmate',
     topImg: {
       image: ''
     },
   },
-  Gosotin: {
+  {
+    id: 'gosotin',
     topImg: {
       image: process.env.PUBLIC_URL + '/assets/allItem/allItem12.jpg'
     },
   },
-  Gosomil: {
+  {
+    id: 'gosomil',
     topImg: {
       image: process.env.PUBLIC_URL + '/assets/allItem/allItem13.jpg'
     },
   },
-  Focuscaffeine: {
+  {
+    id: 'focus',
     topImg: {
       image: process.env.PUBLIC_URL + '/assets/allItem/allItem14.jpg'
     },
   },
-  Light_t: {
+  {
+    id: 'light',
     topImg: {
       image: process.env.PUBLIC_URL + '/assets/allItem/allItem15.jpg'
     },
   },
-  Dext: {
+  {
+    id: 'dext',
     topImg: {
       image: process.env.PUBLIC_URL + '/assets/allItem/allItem16.jpg'
     },
   },
-  Synergyenergy: {
+  {
+    id: 'synergy',
     topImg: {
       image: process.env.PUBLIC_URL + '/assets/allItem/allItem17.jpg'
     },
   },
-  Lemonapplelight: {
+  {
+    id: 'lemonapple',
     topImg: {
       image: process.env.PUBLIC_URL + '/assets/allItem/allItem18.jpg'
     },
   },
-  Recoverygear: {
+  {
+    id: 'recoverygear',
     topImg: {
       image: process.env.PUBLIC_URL + '/assets/allItem/allItem19.jpg'
     },
   },
-  Impactprobiotics: {
+  {
+    id: 'impact',
     topImg: {
       image: process.env.PUBLIC_URL + '/assets/allItem/allItem20.jpg'
     },
   },
-  Pharmacybusiness: {
+  {
+    id: 'pharmacy',
     topImg: {
       image: process.env.PUBLIC_URL + '/assets/allItem/allItem21.jpg'
     },
   },
-  Bottleshopping: {
+  {
+    id: 'bottle',
     topImg: {
       image: process.env.PUBLIC_URL + '/assets/allItem/allItem22.jpg'
     },
   },
-}
+]
 
 export default { data, tabData, eventInfo, allProduct };
 export { data };

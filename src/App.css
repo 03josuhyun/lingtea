@@ -38,9 +38,14 @@
       padding-right: 1rem;
     }
 
-    .lnb {
+    .gnb .lnb.nav-link {
       width: 80px;
       text-align: center;
+    }
+
+    .gnb .lnb.nav-link.active {
+      color: #008BE5;
+      font-weight: bold;
     }
 
     .loginbtn {
@@ -48,6 +53,11 @@
       height: 40px;
       border: none;
       background-color: white;
+      border-radius: 10px;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       margin: 0 10px;
     }
 
@@ -61,6 +71,11 @@
       height: 40px;
       border: none;
       background-color: white;
+      border-radius: 10px;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .cartbtn img {
@@ -173,6 +188,7 @@
     .footerBox .footerRight .footertxt09 {
       display: flex;
     }
+
     .footerBox .footerRight .footertxt11 {
       padding: 0 15px;
     }
