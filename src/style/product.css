@@ -1,0 +1,173 @@
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .allSection {
+      width: 1280px;
+      margin: 0 auto;
+    }
+
+    .allSection .allbreadscrum {
+      width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: right;
+    }
+
+    .allSection .allbreadscrum span {
+      padding: 0 5px;
+    }
+
+    .allSection .alltopImg {
+      width: 1280px;
+      margin: 0 auto;
+    }
+
+    .allSection .allBox {
+      width: 1180px;
+      margin: 0 auto;
+    }
+
+    .allSection .allBox .allTitle {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .allSection .allBox .Tab {
+      margin-top: 60px;
+    }
+
+    .allSection .allBox .Tab button {
+      padding: 5px 10px;
+      font-size: 16px;
+      border-radius: 15px;
+      margin: 5px;
+      border: none;
+      background-color: #eee;
+    }
+
+    .allSection .allBox .Tab button.on {
+      background-color: #008BE5;
+      color: white;
+    }
+
+    .allSection .allBox .allItemNum {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .allSection .allBox .allItemNum p {
+      font-size: 18px;
+    }
+
+    .allSection .allBox .allItemNum p span {
+      font-weight: bold;
+    }
+
+    .allSection .allBox .allItemNum select {
+      padding: 5px 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .allSection .allBox .sheet {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px 20px;
+    }
+
+    .allSection .allBox .sheet .sheetItem {
+      width: 280px;
+      position: relative;
+    }
+
+    .allSection .allBox .sheet .sheetItem img {
+      width: 280px;
+    }
+
+    .allSection .allBox .sheet .sheetItem .cartbtn {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      border: none;
+      background-color: white;
+      border-radius: 10px;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .allSection .allBox .sheet .sheetItem .heartbtn {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 50px;
+      right: 10px;
+      border: none;
+      background-color: white;
+      border-radius: 10px;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .allSection .allBox .sheet .sheetItem .itemDetail {
+      height: 240px;
+      padding: 10px;
+    }
+
+    .allSection .allBox .sheet .sheetItem .itemDetail .title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .allSection .allBox .sheet .sheetItem .itemDetail .smalltitle {
+      font-size: 16px;
+      color: #777;
+    }
+
+    .allSection .allBox .sheet .sheetItem .itemDetail .pay {
+      display: flex;
+    }
+
+    .allSection .allBox .sheet .sheetItem .itemDetail .pay .price {
+      font-size: 20px;
+      font-weight: normal;
+      margin-right: 10px;
+    }
+
+    .allSection .allBox .sheet .sheetItem .itemDetail .pay del {
+      font-size: 16px;
+      color: #777;
+      margin-top: 4px;
+    }
+
+    .allSection .allBox .sheet .sheetItem .itemDetail span {
+      padding: 5px 10px;
+      background-color: #EBF4FC;
+      color: #008BE5;
+      border-radius: 10px;
+      display: inline-block;
+      margin-top: 10px;
+    }

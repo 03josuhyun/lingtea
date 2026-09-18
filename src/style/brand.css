@@ -1,0 +1,160 @@
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .brandSection {
+      width: 1180px;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .brandSection .brandTitle {
+      font-size: 34px;
+      font-weight: bold;
+      margin-top: 90px;
+    }
+
+    .brandSection .ceoBox .ceoTitle {
+      font-size: 26px;
+      font-weight: bold;
+      margin-top: 60px;
+    }
+
+    .brandSection .ceoBox .ceo {
+      margin-top: 30px;
+      display: flex;
+    }
+
+    .brandSection .ceoBox .ceo img {
+      width: 500px;
+      height: auto;
+    }
+
+    .brandSection .ceoBox .ceo .ceotext {
+      margin-left: 10px;
+      height: 150px;
+      margin-top: 300px;
+    }
+
+    .brandSection .ceoBox .ceo .ceotext .text01 {
+      font-size: 30px;
+      padding: 5px 0;
+    }
+
+    .brandSection .ceoBox .ceo .ceotext .text02 {
+      color: #008BE5;
+    }
+
+    .brandSection .ceoBox .ceoTxt {
+      padding: 60px 71px;
+      font-size: 20px;
+    }
+
+    .brandSection .birthBox {}
+
+    .brandSection .birthBox .birthTitle {
+      font-size: 26px;
+      font-weight: bold;
+      margin-top: 60px;
+    }
+
+    .brandSection .birthBox .birthtext01 {
+      width: 1180px;
+      height: auto;
+    }
+    .brandSection .birthBox .birthtext01 .text01txt {
+      color: black;
+      font-size: 30px;
+    }
+    .brandSection .birthBox .birthtext01 p {
+      padding: 30px;
+      color: white;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .brandSection .birthBox .birthtext02 {
+      width: 1180px;
+      height: auto;
+    }
+
+    .brandSection .birthBox .birthtext02 .text03 {
+      padding: 30px;
+      color: white;
+      text-align: center;
+      font-size: 20px;
+    }
+    .brandSection .birthBox .birthtext02 .birthcicle {
+      padding: 60px 0;
+      display: flex;
+      justify-content: center;
+    }
+    .brandSection .birthBox .birthtext02 .birthcicle .text04 {
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
+    }
+    .brandSection .birthBox .birthtext02 .birthcicle .text05 {
+      font-size: 22px;
+      color: white;
+    }
+    .brandSection .birthBox .birthtext02 .birthcicle .circle01 {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 1px dashed white;
+      margin-right: -30px;
+      text-align: center;
+    }
+    .brandSection .birthBox .birthtext02 .birthcicle .circle01 p {
+      padding-top: 60px;
+    }
+    .brandSection .birthBox .birthtext02 .birthcicle .circle02 {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 1px dashed white;
+      text-align: center;
+    }
+    .brandSection .birthBox .birthtext02 .birthcicle .circle02 p {
+      padding-top: 60px;
+    }
+    .brandSection .birthBox .birthtext02 .birthcicle .circle03 {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 1px dashed white;
+      margin-left: -30px;
+      text-align: center;
+    }
+    .brandSection .birthBox .birthtext02 .birthcicle .circle03 p {
+      padding-top: 60px;
+    }
+    .brandSection .birthBox .birthtext03 {
+      width: 1180px;
+      height: 800px;
+      overflow: hidden;
+    }
+    .brandSection .birthBox .birthtext03 p {
+      margin-top: 90px;
+      padding: 0 50px;
+      font-size: 24px;
+    }
+    .brandSection .birthBox .birthtext03 p span {
+      color: #008BE5;
+    }
