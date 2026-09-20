@@ -1,0 +1,88 @@
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .cartSection {
+      width: 1180px;
+      margin: 0 auto;
+      background-color: antiquewhite;
+    }
+    .cartSection .cartTitle {
+      font-size: 28px;
+      font-weight: bold;
+      margin-top: 90px;
+    }
+    .cartSection .cartAdd {
+      border-radius: 20px;
+      border: 1px solid #ddd;
+      height: 370px;
+      width: 1180px;
+      background-color: #EBF4FC;
+      margin-top: 50px;
+      padding: 30px;
+    }
+    .cartSection .cartAdd .cartAddTitle {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .cartSection .cartAdd .cartAddTimeBox {
+      width: 250px;
+      margin-top: 10px;
+      background-color: white;
+      padding: 5px 10px;
+      border-radius: 20px;
+      color: #008BE5;
+    }
+    .cartSection .cartAdd .cartAddTimeBox .cartAddTime {
+      padding: 5px 10px;
+      background-color: #008BE5;
+      border-radius: 20px;
+      margin-right: 10px;
+      color: white;
+    }
+    .cartSection .cartAdd .cartAddItemBox {
+      margin-top: 20px;
+      width: 1120px;
+    }
+    .cartSection .cartAdd .cartAddItemBox .cartAddItemTxt {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .cartSection .cartAdd .cartAddItemBox .cartAddItemTxt span {
+      color: #008BE5;
+    }
+    .cartSection .cartAdd .cartAddItemBox .cartAddLine {
+      margin-top: 15px;
+      height: 8px;
+      border-radius: 5px;
+      background-color: #008BE5;
+    }
+    .cartSection .cartAdd .cartAddItemBox .cartAddItem {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .cartSection .cartAdd .cartAddItemBox .cartAddItem .cartAddbox {
+      width: 300px; height: 150px;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .cartSection .cartAdd .cartAddItemBox .cartAddItem .cartAddbox .cartAddImg img {
+      width: 150px; height: 150px;
+    }

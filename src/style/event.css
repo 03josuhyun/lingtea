@@ -1,0 +1,79 @@
+ * {
+   margin: 0;
+   padding: 0;
+ }
+
+ li {
+   list-style: none;
+ }
+
+ a {
+   color: black;
+   text-decoration: none;
+ }
+
+ p {
+   margin: 0;
+   padding: 0;
+ }
+
+ .eventBannerSection {
+   width: 1280px;
+   margin: 0 auto;
+ }
+
+ .eventBannerSection .eventTitle {
+   text-align: center;
+   margin-top: 90px;
+ }
+
+ .eventBannerSection .eventTitle .title01 {
+   font-size: 30px;
+   font-weight: bold;
+ }
+
+ .eventBannerSection .eventTitle .title02 {
+   font-size: 20px;
+   color: #444;
+ }
+
+ .eventBannerSection .eventSelect {
+   float: right;
+   margin-top: 30px;
+ }
+
+ .eventBannerSection .eventBannerBox {
+   padding: 0 95px;
+   margin-top: 90px;
+   margin-bottom: 30px;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 30px 20px;
+ }
+
+ .eventBannerSection .eventBannerBox .eventBanner {
+   width: 350px;
+   height: 300px;
+   border-radius: 20px;
+   overflow: hidden;
+ }
+
+ .eventBannerSection .eventBannerBox .eventBannerImg img {
+   width: 350px;
+ }
+
+ .eventBannerSection .eventBannerBox .eventBanner .eventBannerDetail {
+   padding: 20px 20px;
+ }
+
+ .eventBannerSection .eventBannerBox .eventBanner .eventBannerDetail .eventBannerTitle {
+   font-size: 20px;
+ }
+
+ .eventBannerSection .eventBannerBox .eventBanner .eventBannerDetail span {
+  display: block;
+   font-size: 16px;
+   margin-top: 15px;
+   text-align: right;
+   color: #777;
+ }

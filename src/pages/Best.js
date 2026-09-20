@@ -1,7 +1,7 @@
 import React from 'react';
 import '../style/best.css';
 import productDate from '../data/productDate';
-import { useState } from 'react';
+//import { useState } from 'react';
 
 export default function Best() {
 

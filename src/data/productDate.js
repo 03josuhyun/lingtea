@@ -1315,5 +1315,28 @@ const allProduct = [
   },
 ]
 
-export default { data, tabData, eventInfo, allProduct };
+const cartAddItem = [
+  {
+    id:'cartAddItem01',
+    name: '고소틴 3포 (3회분)',
+    persent: '20%',
+    price: 7900,
+    image : process.env.PUBLIC_URL + '/assets/cart_img01.webp'
+  },
+  {
+    id:'cartAddItem02',
+    name: '임팩트 유산균 프리미엄 1박스(30회분, 블루베리요거트맛)',
+    persent: '20%',
+    price: 9900,
+    image : process.env.PUBLIC_URL + '/assets/cart_img02.webp'
+  },
+  {
+    id:'cartAddItem03',
+    name: '포커스 카페인 환 1박스(10포입, 은은한 초코향)',
+    persent: '20%',
+    price: 13900,
+    image : process.env.PUBLIC_URL + '/assets/cart_img03.webp'
+  },
+]
+export default { data, tabData, eventInfo, allProduct, cartAddItem };
 export { data };

@@ -271,7 +271,7 @@ export default function Home() {
 
       <div className="brandSection">
         <div className="brandImg">
-          <img src={process.env.PUBLIC_URL + '/assets/brand.jpg'} />
+          <img src={process.env.PUBLIC_URL + '/assets/brand.jpg'} alt='img' />
         </div>
 
         <div className="brandText">

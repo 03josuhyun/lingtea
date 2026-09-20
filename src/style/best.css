@@ -1,0 +1,159 @@
+ * {
+   margin: 0;
+   padding: 0;
+ }
+
+ li {
+   list-style: none;
+ }
+
+ a {
+   color: black;
+   text-decoration: none;
+ }
+
+ p {
+   margin: 0;
+   padding: 0;
+ }
+
+ .bestItemSection {
+   width: 1280px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+ }
+
+ .bestItemSection .bestItembreadscrum {
+   width: 1180px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: right;
+ }
+
+ .bestItemSection .bestItembreadscrum span {
+   padding: 0 5px;
+ }
+
+ .bestItemSection .bestItemtopImg {
+   width: 100%;
+   margin: 20px auto;
+ }
+
+ .bestItemSection .bestItemtopImg img {
+   width: 100%;
+ }
+
+ .bestItemSection .bestItemBox {
+   width: 1180px;
+   margin: 20px auto;
+ }
+
+ .bestItemSection .bestItemBox .bestItemTitle {
+   text-align: center;
+   font-size: 30px;
+   font-weight: bold;
+ }
+
+ .bestItemSection .bestItemBox .bestItemNum {
+   margin-top: 40px;
+ }
+
+ .bestItemSection .bestItemBox .bestItemNum p {
+   font-size: 18px;
+ }
+
+ .bestItemSection .bestItemBox .bestItemNum p span {
+   font-weight: bold;
+ }
+
+ .bestItemSection .bestItemBox .sheet {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 30px 20px;
+ }
+
+ .bestItemSection .bestItemBox .sheet .bestItem {
+   width: 280px;
+   position: relative;
+ }
+
+ .bestItemSection .bestItemBox .sheet .bestItem img {
+   width: 280px;
+ }
+
+ .bestItemSection .bestItemBox .sheet .bestItem .cartbtn {
+   width: 30px;
+   height: 30px;
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   border: none;
+   background-color: white;
+   border-radius: 10px;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .bestItemSection .bestItemBox .sheet .bestItem .heartbtn {
+   width: 30px;
+   height: 30px;
+   position: absolute;
+   top: 50px;
+   right: 10px;
+   border: none;
+   background-color: white;
+   border-radius: 10px;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+
+ .bestItemSection .bestItemBox .sheet .bestItem .bestItemImg img {
+   width: 280px;
+ }
+
+ .bestItemBox .sheet .bestItem .bestItemInfo {
+   height: 240px;
+   padding: 10px;
+   ;
+ }
+
+ .bestItemBox .sheet .bestItem .bestItemInfo .bestItemName {
+   font-size: 20px;
+   font-weight: bold;
+ }
+
+ .bestItemBox .sheet .bestItem .bestItemInfo .bestsmallTitle {
+   font-size: 16px;
+   color: #777;
+ }
+
+ .bestItemBox .sheet .bestItem .bestItemInfo .bestItemPrice {
+   display: flex;
+ }
+
+ .bestItemBox .sheet .bestItem .bestItemInfo .bestItemPrice p {
+   font-size: 20px;
+   font-weight: normal;
+   margin-right: 10px;
+ }
+
+ .bestItemBox .sheet .bestItem .bestItemInfo .bestItemPrice del {
+   font-size: 16px;
+   color: #777;
+   margin-top: 4px;
+ }
+
+ .bestItemBox .sheet .bestItemInfo span {
+   padding: 5px 10px;
+   background-color: #EBF4FC;
+   color: #008BE5;
+   border-radius: 10px;
+   display: inline-block;
+   margin-top: 10px;
+ }
