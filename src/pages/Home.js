@@ -3,11 +3,16 @@ import '../style/home.css'
 import Carousel from 'react-bootstrap/Carousel';
 import productDate from '../data/productDate';
 import { useState } from 'react';
+import { addItem } from './store';
+import { useDispatch } from 'react-redux';
+import ProductCard from '../components/item';
+
 
 export default function Home() {
   const { data: bestProducts, tabData, eventInfo } = productDate;
   const [activeTab, setActiveTab] = useState('recovery');
   const [activeTab01, setActiveTab01] = useState('origainal');
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -52,30 +57,14 @@ export default function Home() {
         </div>
         <div className="bestBox">
           {
-            bestProducts.slice(0, 4).map((product) => {
-              return (
-                <div className="bestItem" key={product.id}>
-                  <div className="bestImg">
-                    <img src={product.image} alt={product.title} />
-                    <button className='cartbtn'>
-                      <img src={process.env.PUBLIC_URL + '/assets/btncart.png'} alt="" />
-                    </button>
-                    <button className='heartbtn'>
-                      <img src={process.env.PUBLIC_URL + '/assets/btnheart.png'} alt="" />
-                    </button>
-                  </div>
-                  <div className="bestInfo">
-                    <p className='itemtitle'>{product.title}</p>
-                    <p className='smailltitle'>{product.smalltitle}</p>
-                    <div className="price_box">
-                      <p className='price'>{product.price}원</p>
-                      <del className='delprice'>{product.delprice}원</del>
-                    </div>
-                    <span className='pricedetail'>{product.pricedetail}</span>
-                  </div>
-                </div>
-              )
-            })
+            bestProducts.slice(0,4).map((product) => (
+              <ProductCard 
+              key={product.id}
+              product={product}
+              onCartClick = {(prod) => dispatch(addItem({...prod, count:1}))} 
+              />
+
+            ))
           }
         </div>
         <button className='bestAdd'>

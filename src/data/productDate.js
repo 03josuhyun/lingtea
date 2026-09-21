@@ -1338,5 +1338,7 @@ const cartAddItem = [
     image : process.env.PUBLIC_URL + '/assets/cart_img03.webp'
   },
 ]
-export default { data, tabData, eventInfo, allProduct, cartAddItem };
+// export default { data, tabData, eventInfo, allProduct, cartAddItem };
+const productData = { data, tabData, eventInfo, allProduct, cartAddItem };
+export default productData;
 export { data };
