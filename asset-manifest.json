@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/lingtea/static/css/main.7641f9b7.css",
-    "main.js": "/lingtea/static/js/main.930b494c.js",
+    "main.css": "/lingtea/static/css/main.172f57b9.css",
+    "main.js": "/lingtea/static/js/main.53856ebf.js",
     "static/js/453.c7dcc541.chunk.js": "/lingtea/static/js/453.c7dcc541.chunk.js",
     "index.html": "/lingtea/index.html",
-    "main.7641f9b7.css.map": "/lingtea/static/css/main.7641f9b7.css.map",
-    "main.930b494c.js.map": "/lingtea/static/js/main.930b494c.js.map",
+    "main.172f57b9.css.map": "/lingtea/static/css/main.172f57b9.css.map",
+    "main.53856ebf.js.map": "/lingtea/static/js/main.53856ebf.js.map",
     "453.c7dcc541.chunk.js.map": "/lingtea/static/js/453.c7dcc541.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7641f9b7.css",
-    "static/js/main.930b494c.js"
+    "static/css/main.172f57b9.css",
+    "static/js/main.53856ebf.js"
   ]
 }
