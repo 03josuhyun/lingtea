@@ -3,6 +3,8 @@ import '../style/product.css'
 //import { Outlet } from 'react-router-dom';
 import productDate from '../data/productDate';
 import { useState } from 'react';
+import ProductCard from '../components/item';
+import { addItem } from './store';
 
 
 
@@ -131,30 +133,11 @@ export default function Product() {
           <div className="sheet">
             {
               sortedProducts.map((product) => (
-                <div className="sheetItem" key={product.id}>
-                  <img src={product.image} alt={product.title} />
-                  <button className='cartbtn'>
-                    <img src={process.env.PUBLIC_URL + '/assets/btncart.png'} alt="" />
-                  </button>
-                  <button className='heartbtn'>
-                    <img src={process.env.PUBLIC_URL + '/assets/btnheart.png'} alt="" />
-                  </button>
-                  <div className="itemDetail">
-                    <p className='title'>{product.title}</p>
-                    <p className='smalltitle'>{product.smalltitle}</p>
-                    <div className="pay">
-                      <p className='price'>{product.price.toLocaleString()}원</p>
-                      {
-                        activeTab !== 'pharmacy' && (
-                          <del>{product.delprice.toLocaleString()}원</del>
-                        )
-                      }
-                    </div>
-                    {product.pricedetail && (
-                      <span>{product.pricedetail}</span>
-                    )}
-                  </div>
-                </div>
+                <ProductCard 
+                key={product.id}
+                product={{...product, delprice: activeTab === 'pharmacy' ? 0 : product.delprice}}
+                onCartClick={(prod) => dispatchEvent(addItem({...prod, count : 1}))}
+                 />
               ))
             }
           </div>

@@ -77,94 +77,98 @@
 }
 
 .bestBox {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 50px;
 }
-
-.bestBox .bestItem {
+/**/
+.productCard {
   width: 280px;
   position: relative;
 }
 
-.bestBox .bestItem .bestImg .cartbtn {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  border: none;
-  background-color: white;
-  border-radius: 10px;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.itemBox {
+  width: 280px;
 }
 
-.bestBox .bestItem .bestImg .heartbtn {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 50px;
-  right: 10px;
-  border: none;
-  background-color: white;
-  border-radius: 10px;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bestBox .bestItem .bestImg .cartbtn img {
-  width: 30px;
-  height: 30px;
-}
-
-.bestBox .bestItem .bestImg .heartbtn img {
-  width: 30px;
-  height: 30px;
-}
-
-.bestBox .bestItem .bestImg img {
+.itemImg {
+  position: relative;
   width: 280px;
   height: 280px;
 }
 
-.bestBox .bestItem .bestInfo {
+.itemImg img {
+  width: 280px;
+  height: 280px;
+}
+
+.cartbtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  background-color: white;
+}
+
+.cartbtn img {
+  width: 30px;
+  height: 30px;
+}
+
+.heartbtn {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  background-color: white;
+}
+
+.heartbtn img {
+  width: 30px;
+  height: 30px;
+}
+
+.itemInfo {
   height: 240px;
   padding: 10px;
 }
 
-.bestBox .bestItem .bestInfo .itemtitle {
+.itemInfo .itemTitle {
   font-size: 20px;
   font-weight: bold;
 }
 
-.bestBox .bestItem .bestInfo .smailltitle {
+.itemInfo .itemSmailTitle {
   font-size: 16px;
   color: #777;
 }
 
-.bestBox .bestItem .bestInfo .price_box {
+.itemInfo .price_box {
   display: flex;
+  margin-top: 10px;
 }
 
-.bestBox .bestItem .bestInfo .price_box .price {
+.itemInfo .price_box .price {
   font-size: 20px;
   font-weight: normal;
-  margin-right: 10px;
 }
 
-.bestBox .bestItem .bestInfo .price_box .delprice {
+.itemInfo .price_box .delprice {
   display: inline-block;
   font-size: 16px;
   font-weight: normal;
   color: #777;
-  margin: 4px 0;
+  margin: 4px;
 }
 
-.bestBox .bestItem .bestInfo .pricedetail {
+.itemInfo .pricedetail {
   border-radius: 10px;
   color: #008BE5;
   background-color: #EBF4FC;
@@ -172,6 +176,8 @@
   display: inline-block;
   margin-top: 10px;
 }
+
+/**/
 
 .bestSection .bestAdd {
   display: block;

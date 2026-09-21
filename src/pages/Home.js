@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { addItem } from './store';
 import { useDispatch } from 'react-redux';
 import ProductCard from '../components/item';
+import { useNavigate } from "react-router-dom";
 
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState('recovery');
   const [activeTab01, setActiveTab01] = useState('origainal');
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   return (
     <>
@@ -57,17 +59,16 @@ export default function Home() {
         </div>
         <div className="bestBox">
           {
-            bestProducts.slice(0,4).map((product) => (
-              <ProductCard 
-              key={product.id}
-              product={product}
-              onCartClick = {(prod) => dispatch(addItem({...prod, count:1}))} 
+            bestProducts.slice(0, 4).map((product) => (
+              <ProductCard
+                key={product.id}
+                product={product}
+                onCartClick={(prod) => dispatch(addItem({ ...prod, count: 1 }))}
               />
-
             ))
           }
         </div>
-        <button className='bestAdd'>
+        <button className='bestAdd' onClick={() => navigate('/best')}>
           전체보기
         </button>
       </div>
@@ -286,7 +287,7 @@ export default function Home() {
           </button>
           <div className="event">
             {
-              eventInfo.slice(0,3).map((event)=> {
+              eventInfo.slice(0, 3).map((event) => {
                 return (
                   <div className="eventItem" key={event.id}>
                     <div className="eventImg">

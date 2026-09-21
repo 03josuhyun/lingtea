@@ -75,7 +75,7 @@ function App() {
               <button className='loginbtn' onClick={() => navigate('/login')}>
                 <img src={process.env.PUBLIC_URL + '/assets/loginbtn.png'} alt="" />
               </button>
-              <button className='cartbtn' onClick={() => navigate('/cart')}>
+              <button className='btncart' onClick={() => navigate('/cart')}>
                 <img src={process.env.PUBLIC_URL + '/assets/cartbtn.png'} alt="" />
               </button>
             </Offcanvas.Body>

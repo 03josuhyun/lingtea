@@ -1,12 +1,17 @@
 import React from 'react';
 import '../style/best.css';
 import productDate from '../data/productDate';
-//import { useState } from 'react';
+import ProductCard from '../components/item';
+import Product from './Product';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux'; 
+import { addItem } from './store.js';
 
 export default function Best() {
 
   const { data } = productDate;
   const bestProduct = data.filter((item) => (item.isBest === true));
+  const dispatch = useDispatch()
   return (
     <div>
       <div className="bestItemSection">
@@ -30,27 +35,12 @@ export default function Best() {
           <hr />
           <div className="sheet">
             {
-              bestProduct.map((item) => (
-                <div className="bestItem" key={item.id}>
-                  <div className="bestItemImg">
-                    <img src={item.image} alt={item.title} />
-                    <button className='cartbtn'>
-                    <img src={process.env.PUBLIC_URL + '/assets/btncart.png'} alt="" />
-                  </button>
-                  <button className='heartbtn'>
-                    <img src={process.env.PUBLIC_URL + '/assets/btnheart.png'} alt="" />
-                  </button>
-                  </div>
-                  <div className="bestItemInfo">
-                    <p className='bestItemName'>{item.title}</p>
-                    <p className='bestsmallTitle'>{item.smalltitle}</p>
-                    <div className="bestItemPrice">
-                      <p>{item.price.toString()}원</p>
-                      <del>{item.delprice.toString()}원</del>
-                    </div>
-                    <span>{item.pricedetail}</span>
-                  </div>
-                </div>
+              bestProduct.map((product) => (
+                <ProductCard
+                key={product.id}
+                product={product}
+                onCartClick={(prod) => dispatch(addItem({ ...prod, count: 1 }))}
+                 />
               ))
             }
           </div>
