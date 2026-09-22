@@ -1,0 +1,207 @@
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+
+    .detailSection {
+      width: 1280px;
+      margin: 0 auto;
+      padding: 50px;
+      background-color: antiquewhite;
+      box-sizing: border-box
+    }
+
+    .detailSection .detailItem {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .detailSection .detailItem .detailItemImg {}
+
+    .detailSection .detailItem .detailItemImg>img {
+      width: 580px;
+      height: 580px;
+      display: block;
+    }
+
+    .detailSection .detailItem .detailItemImg .detailThumnail {
+      display: flex;
+      justify-content: left;
+      width: 580px;
+      margin-top: 20px;
+      padding: 0;
+    }
+
+    .detailSection .detailItem .detailItemImg .detailThumnail .thumnail {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    .detailItemInfo {
+      width: 585px;
+      margin-top: 30px;
+    }
+
+    .detailItemInfo .detailTitle {
+      font-size: 24px;
+      font-weight: normal;
+    }
+
+    .detailItemInfo .detailItemSmallTitle {
+      font-size: 16px;
+      color: #444;
+      margin-top: 10px;
+    }
+
+    .detailItemInfo .detailPriceBox {
+      margin-top: 50px;
+    }
+
+    .detailItemInfo .detailPriceBox del {
+      font-size: 16px;
+      margin-bottom: 10px;
+      margin-left: 2px;
+      color: #777;
+    }
+
+    .detailItemInfo .detailPriceBox p {
+      font-size: 22px;
+      font-weight: normal;
+    }
+
+    .detailItemInfo .detailPriceBox p span {
+      color: #008BE5;
+      margin-left: 5px;
+    }
+
+    .detailItemInfo .detailMid {
+      border-bottom: 1px solid #ccc;
+      border-top: 1px solid #ccc;
+      margin-top: 15px;
+    }
+
+    .detailItemInfo .detailMid .txt {
+      padding: 15px 0;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+    }
+
+    .detailItemInfo .detailMid .txt p {
+      margin-left: 20px;
+      color: #444;
+    }
+
+    .detailItemInfo .detailMid .optionBox01 {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+    }
+
+    .detailItemInfo .detailMid .optionBox01 select {
+      width: 455px;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    .detailItemInfo .detailMid .optionBox02 {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+    }
+
+    .detailItemInfo .detailMid .optionBox02 select {
+      width: 455px;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    .detailItemInfo .ItemResult {
+      margin-top: 30px;
+      width: 100%;
+      background-color: #eee;
+      border-radius: 10px;
+      padding: 20px;
+      position: relative;
+    }
+
+    .detailItemInfo .ItemResult .mainProdTitle {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .detailItemInfo .ItemResult .selectedOptName {
+      color: #777;
+      font-size: 14px;
+      padding: 5px;
+    }
+
+    .detailItemInfo .ItemResult .resultItemBot {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .detailItemInfo .ItemResult .resultItemBot .resultPrice {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .detailItemInfo .ItemResult .resultItemBot  .countGroup {
+      margin-left: 10px;
+      width: 100px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .detailItemInfo .ItemResult .resultItemBot  .countGroup button {
+      width: 30px; height: 30px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: white;
+      text-align: center;
+      line-height: 20px;
+      font-size: 22px;
+    }
+    .detailItemInfo .ItemResult .deleteBtn {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      border: none;
+      background-color: #eee;
+      width: 25px;
+      height: 25px;
+    }
+    .finalTotalSection {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      padding: 0 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .finalTotalSection .totalPriceValue span {
+      font-size: 16px;
+      color: #777;
+      font-weight: normal;
+    }
+    .detailSection .mb-3 {
+      width: 1180px;
+      margin: 0 auto;
+      margin-top: 90px;
+    }

@@ -120,7 +120,6 @@
     }
     .cartSection .cartBox .cartLeft {
       width: 770px;
-      background-color: blanchedalmond;
     }
     .cartSection .cartBox .cartLeft .cartTop {
       border-top: 1px solid #444;
@@ -249,17 +248,17 @@
       width: 100%;
       background-color: aliceblue;
       padding: 20px 30px;
-      border-bottom: 1px solid #ccc;
     }
     .cartSection .cartBox .cartLeft .cartItemBox .cart {
       display: flex;
       justify-content: space-between;
-      
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
     }
     .cartSection .cartBox .cartLeft .cartItemBox .cart .cartImg {
       width: 300px; height: 300px;
       display: flex;
-      align-items: flex-start;
     }
     .cartSection .cartBox .cartLeft .cartItemBox .cart .cartImg input {
       transform: scale(1.2);
@@ -270,6 +269,7 @@
       width: 300px; height: 300px;
     }
     .cartSection .cartBox .cartLeft .cartItemBox .cart .cartDetail {
+      width: 490px;
       padding: 10px 30px;
       position: relative;
     }
@@ -283,11 +283,12 @@
     .cartSection .cartBox .cartLeft .cartItemBox .cart .cartDetail .cartName {
       font-size: 24px;
       font-weight: bold;
+      align-items: flex-start;
     }
     .cartSection .cartBox .cartLeft .cartItemBox .cart .cartDetail .cartPay {
       position: absolute;
       bottom: 50px;
-      left: 30px;
+      left: 40px;
       font-size: 20px;
       font-weight: bold;
     }

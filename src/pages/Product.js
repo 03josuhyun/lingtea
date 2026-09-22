@@ -5,12 +5,15 @@ import productDate from '../data/productDate';
 import { useState } from 'react';
 import ProductCard from '../components/item';
 import { addItem } from './store';
-
+import { useDispatch } from 'react-redux';
+import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Product() {
 
   const { data, allProduct } = productDate;
+  const dispatch = useDispatch();
   const [activeTab, setActiveTab] = useState('all');
   const [sort, setSort] = useState('default');
   const currentTopImg = allProduct.find(
@@ -130,19 +133,37 @@ export default function Product() {
             </select>
           </div>
           <hr />
-          <div className="sheet">
-            {
-              sortedProducts.map((product) => (
-                <ProductCard 
+          <SheetGrid>
+            {sortedProducts.map((product) => (
+              <ProductCard
                 key={product.id}
-                product={{...product, delprice: activeTab === 'pharmacy' ? 0 : product.delprice}}
-                onCartClick={(prod) => dispatchEvent(addItem({...prod, count : 1}))}
-                 />
-              ))
-            }
-          </div>
+                product={{
+                  ...product,
+                  delprice: activeTab === 'pharmacy' ? 0 : product.delprice
+                }}
+                onCartClick={(target) => {
+                  dispatch(addItem({
+                    id: target.id,
+                    title: target.title,
+                    price: target.price,
+                    image: target.image,
+                    count: 1
+                  }));
+                }}
+              />
+            ))}
+          </SheetGrid>
         </div>
       </div>
     </div>
   )
 }
+
+const SheetGrid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 20px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  width: 100%;
+`;

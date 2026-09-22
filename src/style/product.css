@@ -37,6 +37,7 @@
       width: 100%;
       margin: 20px auto;
     }
+
     .allSection .alltopImg img {
       width: 100%;
     }
@@ -90,13 +91,121 @@
       border: 1px solid #ccc;
     }
 
-    .allSection .allBox .sheet {
+     /* .allSection .allBox .sheet {
       display: flex;
       flex-wrap: wrap;
       gap: 30px 20px;
+      margin-top: 20px;
+      margin-bottom: 50px;
     }
 
-    .allSection .allBox .sheet .sheetItem {
+   .itemBox {
+      width: 280px;
+      background-color: aqua !important;
+    }
+
+    .itemImg {
+      position: relative;
+      width: 280px;
+      height: 280px;
+    }
+
+    .productImage {
+      width: 280px;
+      height: 280px;
+      cursor: pointer;
+      display: block;
+    }
+
+    .cartbtn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 100;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      border: none;
+      border-radius: 10px;
+      background-color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cartbtn img {
+      width: 30px;
+      height: 30px;
+      display: block;
+    }
+
+    .heartbtn {
+      position: absolute;
+      top: 50px;
+      right: 10px;
+      z-index: 100;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      border: none;
+      border-radius: 10px;
+      background-color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .heartbtn img {
+      width: 30px;
+      height: 30px;
+      display: block;
+    }
+
+    .itemInfo {
+      height: 240px;
+      padding: 10px;
+    }
+
+    .itemInfo .itemTitle {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .itemInfo .itemSmailTitle {
+      font-size: 16px;
+      color: #777;
+    }
+
+    .itemInfo .price_box {
+      display: flex;
+      margin-top: 10px;
+    }
+
+    .itemInfo .price_box .price {
+      font-size: 20px;
+      font-weight: normal;
+    }
+
+    .itemInfo .price_box .delprice {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: normal;
+      color: #777;
+      margin: 4px;
+    }
+
+    .itemInfo .pricedetail {
+      border-radius: 10px;
+      color: #008BE5;
+      background-color: #EBF4FC;
+      padding: 5px 10px;
+      display: inline-block;
+      margin-top: 10px;
+    } */
+
+    /* .allSection .allBox .sheet .sheetItem {
       width: 280px;
       position: relative;
     }
@@ -173,4 +282,4 @@
       border-radius: 10px;
       display: inline-block;
       margin-top: 10px;
-    }
+    } */

@@ -2,7 +2,7 @@ import React from 'react';
 import '../style/cart.css'
 import productDate from '../data/productDate';
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteItem, addCount, subCount } from './store';
+import { deleteItem, addCount, subCount, addItem } from './store';
 //import { Outlet } from 'react-router-dom';
 
 export default function Cart() {
@@ -41,12 +41,13 @@ export default function Cart() {
                       <img src={item.image} alt={item.name} />
                     </div>
                     <div className="cartAddDetail">
-                      <p className='cartAddName'>{item.name}</p>
+                      <p className='cartAddName'>{item.title || item.name}
+                      </p>
                       <div className='cartAddPrice'>
                         <span>{item.persent}</span>
                         <p>{item.price.toLocaleString()}원</p>
                       </div>
-                      <button className='cartAddbtn'>
+                      <button className='cartAddbtn' onClick={() => dispatch(addItem({ ...item, count: 1 }))}>
                         담기
                       </button>
                     </div>
@@ -66,7 +67,7 @@ export default function Cart() {
               </div>
               <p>장바구니 보관기간은 30일입니다.</p>
             </div>
-            <div className="cartItemBox">
+            {/* <div className="cartItemBox">
               {
 
 
@@ -107,6 +108,83 @@ export default function Cart() {
                       </div>
                     </div>
                   )
+                })
+              }
+            </div> */}
+            <div className="cartItemBox">
+              {
+                state.cart.map((item) => {
+                  return (
+                    <div className="cart" key={item.id}>
+
+                      <div className="cartImg">
+                        <input
+                          type="checkbox"
+                          name=""
+                          id="cartItemChk"
+                        />
+
+                        <img
+                          src={item.image}
+                          alt={item.title || item.name}
+                        />
+                      </div>
+
+                      <div className="cartDetail">
+
+                        <button className="giftbtn">
+                          <img
+                            src={process.env.PUBLIC_URL + '/assets/gift.png'}
+                            alt=""
+                          />
+                          선물하기
+                        </button>
+
+                        <p className="cartName">
+                          {item.title || item.name}
+                        </p>
+
+                        <p className="cartOption">
+                          {item.option}
+                        </p>
+
+                        <p className="cartPay">
+                          {item.price.toLocaleString()}원
+                        </p>
+
+                        <div className="cartBtn">
+
+                          <button
+                            className="btn_min"
+                            onClick={() => dispatch(subCount(item.id))}
+                          >
+                            -
+                          </button>
+
+                          <span>{item.count}</span>
+
+                          <button
+                            className="btn_pluse"
+                            onClick={() => dispatch(addCount(item.id))}
+                          >
+                            +
+                          </button>
+
+                        </div>
+
+                        <button
+                          className="cartDelte"
+                          onClick={() => dispatch(deleteItem(item.id))}
+                        >
+                          <img
+                            src={process.env.PUBLIC_URL + '/assets/x.png'}
+                            alt=""
+                          />
+                        </button>
+
+                      </div>
+                    </div>
+                  );
                 })
               }
             </div>
