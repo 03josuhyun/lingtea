@@ -25,7 +25,7 @@ function App() {
 
       <Navbar className='nav' expand="sm">
         <Container fluid>
-          <Navbar.Brand onClick={() => { navigate('/home') }}>
+          <Navbar.Brand onClick={() => { navigate('/') }}>
             <img className='logo' src={process.env.PUBLIC_URL + '/assets/logo.png'} alt="로고" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-sm`} />
@@ -43,7 +43,7 @@ function App() {
               <Nav className="gnb">
                 <Nav.Link
                   className={`lnb lnb01 ${location.pathname === '/home' ? 'active' : ''}`}
-                  onClick={() => {navigate('/home') }}
+                  onClick={() => {navigate('/') }}
                 >홈</Nav.Link>
                 <Nav.Link
                   className={`lnb lnb01 ${location.pathname === '/brand' ? 'active' : ''}`}
@@ -83,7 +83,7 @@ function App() {
         </Container>
       </Navbar>
       <Routes>
-        <Route path='home' element={<Home />} />
+        <Route path='/' element={<Home />} />
         <Route path='brand' element={<Brand />} />
         <Route path='product' element={<Product />} />
         <Route path='detail/:id' element={<Detail />} />

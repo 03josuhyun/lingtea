@@ -22,7 +22,6 @@
       width: 1280px;
       margin: 0 auto;
       padding: 50px;
-      background-color: antiquewhite;
       box-sizing: border-box
     }
 
@@ -200,8 +199,45 @@
       color: #777;
       font-weight: normal;
     }
+    .buySection {
+      margin-top: 50px;
+      font-size: 20px;
+      width: 585px;
+    }
+    .buySection .buyBtn {
+      margin-bottom: 20px;
+      width: 100%;
+      padding: 5px;
+      border-radius: 10px;
+      border: none;
+      background-color: #008BE5;
+      color: white;
+    }
+    .buySection .buySubBtn {
+      display: flex;
+      justify-content: space-between;
+    }
+    .buySection .buySubBtn .buyCartBtn {
+      width: 60%;
+      padding: 5px;
+      border-radius: 10px;
+      border: #ccc;
+      background-color: white;
+    }
+    .buySection .buySubBtn .buyGiftBtn {
+      width: 35%;
+      padding: 5px;
+      border: #ccc;
+      background-color: white;
+      border-radius: 10px;
+    }
     .detailSection .mb-3 {
       width: 1180px;
       margin: 0 auto;
       margin-top: 90px;
+    }
+    .qandaSection {
+      width: 880px;
+      margin: 0 auto;
+      background-color: antiquewhite;
     }

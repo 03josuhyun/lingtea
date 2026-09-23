@@ -90,6 +90,9 @@ export default function Detail() {
     setSelectedMain('');
     setSelectedSub('');
   };
+
+  const [qandaBox, setQandaBox] = useState([]); 
+
   return (
     <div>
       <div className="detailSection">
@@ -203,14 +206,14 @@ export default function Detail() {
             </div>
 
             <div className="buySection">
-              <button className='butBtn'>
+              <button className='buyBtn'>
                 구매하기
               </button>
               <div className="buySubBtn">
-                <button>
+                <button className='buyCartBtn'>
                   장바구니 담기
                 </button>
-                <button>
+                <button className='buyGiftBtn'>
                   <img src={process.env.PUBLIC_URL + '/assets/gift.png'} alt="" />선물하기
                 </button>
               </div>
@@ -229,7 +232,7 @@ export default function Detail() {
             <div className="detailContents" >
               {
                 product && product.detailInfo && product.detailInfo.map((imgUrl, index) => (
-                  <img key={index} src={imgUrl} alt={`상세정보 이미지 ${index + 1}`} style={{width: '1180px', display: 'block', margin : '0 auto'}}/>
+                  <img key={index} src={imgUrl} alt={`상세정보 이미지 ${index + 1}`} style={{ width: '850px', display: 'block', margin: '0 auto' }} />
                 ))
               }
             </div>
@@ -239,10 +242,61 @@ export default function Detail() {
             Tab content for Profile
           </Tab>
           <Tab eventKey="longer-tab" title="상품문의">
-            Tab content for Loooonger Tab
+            <div className="qandaSection">
+              {
+                qandaBox.map((qa, index) => (
+                  <div className="qanda">
+
+                  </div>
+                ))
+              }
+            </div>
           </Tab>
           <Tab eventKey="contact" title="배송/교환/환불 안내">
-            Tab content for Contact
+            <p className='text01' style={{width: '880px', margin: '0 auto', textAlign: 'justify', marginTop: '60px', color: '#444'}}>
+              고액결제의 경우 안전을 위해 카드사에서 확인전화를 드릴 수도 있습니다. 확인과정에서 도난 카드의 사용이나 타인 명의의 주문등 정상적인 주문이 아니라고 판단될 경우 임의로 주문을 보류 또는 취소할 수 있습니다.
+
+              무통장 입금은 상품 구매 대금은 PC뱅킹, 인터넷뱅킹, 텔레뱅킹 혹은 가까운 은행에서 직접 입금하시면 됩니다.
+              주문시 입력한 입금자명과 실제입금자의 성명이 반드시 일치하여야 하며, 7일 이내로 입금을 하셔야 하며 입금되지 않은 주문은 자동취소 됩니다.
+            </p>
+            <br />
+            <p className='text02' style={{width: '880px', margin: '0 auto', textAlign: 'justify' , color: '#444'}}>
+              교환 및 반품이 가능한 경우
+              - 단순변심, 착오구매에 따른 교환/반품 신청은 상품을 공급 받으신 날로부터 7일 이내 가능
+              (교환/반품 왕복 배송비 5,000원 고객 부담)
+              - 공급 받으신 상품 및 용역의 내용이 표시/광고 내용과 다르거나 계약내용과 다르게 이행된 경우에는 공급 받은 날로부터 3개월 이내, 그 사실을 알게 된 날로부터 30일 이내 (배송비 회사 부담) 
+              - 교환/반품을 원하는 고객은 쇼핑몰의 [마이페이지주문내역조회]를 통해 신청, 신청 후 지정 택배사가 직접 방문하여 상품을 수거
+              - 제품, 배송 문의는 카카오톡 채널 [링티] 또는 고객센터 [1544-5200]로 문의
+              - 상품 구매 시 사은품/증정품 등이 제공된 경우, 상품 교환/반품 시 함께 동봉
+              - 반품 처리는 영업일 기준 7일 정도 소요
+
+              교환 및 반품이 불가능한 경우
+              - 고객님의 책임 있는 사유로 상품 등이 멸실 또는 훼손된 경우. 단, 상품의 내용을 확인하기 위하여 포장 등을 훼손한 경우는 제외
+              - 포장을 개봉하였거나 포장이 훼손되어 상품가치가 상실된 경우
+              - 고객님의 사용 또는 일부 소비에 의하여 상품의 가치가 현저히 감소한 경우
+              - 시간의 경과에 의하여 재판매가 곤란할 정도로 상품 등의 가치가 현저히 감소한 경우
+              - 복제가 가능한 상품 등의 포장을 훼손한 경우
+              (자세한 내용은 고객감동센터 또는 카카오톡 플러스친구 '링티'를 추가하여 확인 해주시기 바랍니다.)
+
+              ※ 단순 변심으로 인해 교환, 반품을 하실 경우 상품반송 비용은 고객님께서 부담해주셔야 합니다. (맛 교환 등 포함)
+            </p>
+            <br />
+            <p className='text03' style={{width: '880px', margin: '0 auto', textAlign: 'justify' , color: '#444'}}>
+              배송 방법 : 택배
+              배송 지역 : 전국지역
+              배송 비용 : 무료
+              배송 기간 : 1일 ~ 3일
+              배송 안내 :
+              주문한 상품은 언제쯤 배송되나요?
+              평일 낮 12시 이전 주문 건은 당일 출고가 진행됩니다. 택배사 사정에 따라 출고일로부터 1~2일 정도(공휴일 제외) 배송기간이 소요됩니다.
+
+              지역별 배송비를 알고싶어요
+              제주/ 도서산간지역 구분하지 않고 전지역 동일하게 배송비 2,500원 부담됩니다. 결제금액 3만원 이상 주문시 배송비는 무료입니다.
+
+              상품을 따로 주문했는데 묶음배송이 가능한가요?
+              묶음배송의 경우는 주문하신 시간이 낮 12시 이전에 주문 건에 대해서는 상품을 따로 주문하셨더라도 묶음 배송처리가 가능합니다.
+              다만 낮 12시 이후 주문의 경우에는 이전 주문 건이 출고가 되어, 묶음배송 처리가 어렵습니다.
+            </p>
           </Tab>
         </Tabs>
       </div>
