@@ -91,8 +91,16 @@ export default function Detail() {
     setSelectedSub('');
   };
 
-  const [qandaBox, setQandaBox] = useState([]); 
+  const matchedReviews = productData.reviews
+    ? productData.reviews.filter((review) => review.productId === id)
+    : [];
+  const tabs = ['상세정보', `상품후기 ${matchedReviews.length}`, '상품문의 16', '배송/교환/환불 안내'];
+  const [activeTab, setActiveTab] = useState(1);
+  const renderStars = (rating) => {
+    return '★'.repeat(rating) + '☆'.repeat(5 - rating);
+  };
 
+  const [qandaBox, setQandaBox] = useState(productData?.qanda || []);
   return (
     <div>
       <div className="detailSection">
@@ -239,32 +247,129 @@ export default function Detail() {
 
           </Tab>
           <Tab eventKey="profile" title="상품후기">
-            Tab content for Profile
+            <div className="reviewSection" style={{ width: '880px', margin: '50px auto' }}>
+              <div className="reviewTop">
+                <p className="reviewTitle01" style={{ fontSize: '30px' }}>
+                  Review
+                </p>
+                <div className="reviewTopImage" style={{ display: 'flex', justifyContent: 'space-between', margin: '30px auto' }}>
+                  {
+                    productData.reviews && productData.reviews.slice(0, 4).map((review) => (
+                      <div key={review.reviewId}>
+                        <img src={review.images[0]} alt="리뷰이미지" style={{ width: '200px', height: '200px', objectFit: 'cover', }} />
+                      </div>
+                    ))
+                  }
+                </div>
+                <p className="reviewTitle02" style={{ fontSize: '24px', }}>
+                  리뷰 {matchedReviews.length}
+                </p>
+                <div className="reaviewTabs" style={{ display: 'flex', justifyContent: 'space-between', padding: '20px 10px', borderBottom: '1px soild black', }}>
+                  <p>포토</p>
+                  <select name="" id="">
+                    <option value="">추천순</option>
+                    <option value="">최신순</option>
+                    <option value="">별점순</option>
+                  </select>
+                </div>
+              </div>
+              <div className="reviewBot">
+                {matchedReviews.map((review) => (
+                  <div key={review.reviewId} className="py-4 border-b border-gray-100 flex gap-6" style={{ borderBottom: '1px solid #ccc' }}>
+                    <div className="w-32 flex-shrink-0 text-xs text-gray-400 space-y-1">
+                      <div className="font-medium text-gray-600">{review.userId}</div>
+                      <div className="pt-2 text-gray-300">{review.createdAt} 작성</div>
+                    </div>
+                    <div className="flex-1 space-y-2">
+                      <div className="flex items-center space-x-2">
+                        <div className="flex text-amber-400 text-sm">{renderStars(review.rating)}</div>
+                        {review.rating === 5 && (
+                          <span className="text-[10px] bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded border border-gray-200">
+                            재구매
+                          </span>
+                        )}
+                      </div>
+                      <div className="flex items-center space-x-1 text-xs text-gray-500">
+                        <span className="inline-block bg-blue-600 text-white font-bold px-1 rounded text-[10px]">1</span>
+                        <span>상품 ID: {review.productId}</span>
+                      </div>
+                      <p className="text-sm text-gray-600 leading-relaxed">
+                        {review.content}
+                      </p>
+
+                      <button className="text-xs text-gray-400 flex items-center hover:underline" style={{ border: '1px solid #ccc', borderRadius: '20px', padding: '3px 10px', backgroundColor: 'white' }}>
+                        접기 ▴
+                      </button>
+                      {review.images && review.images.length > 0 && (
+                        <div className="w-24 h-24 bg-gray-100 rounded overflow-hidden mt-2">
+                          <img src={review.images[0]} alt="Review attached" className="w-full h-full object-cover" style={{ width: '150px', height: '150px' }} />
+                        </div>
+                      )}
+                      <div className="flex space-x-4 pt-2 text-xs text-gray-400">
+                        <button className="hover:text-gray-600" style={{ border: 'none', backgroundColor: '#eee', borderRadius: '10px', padding: '2px 5px', margin: '0 10px' }}>💬 댓글 0</button>
+                        <button className="hover:text-gray-600" style={{ border: 'none', backgroundColor: '#eee', borderRadius: '10px', padding: '2px 5px' }}>🚨 신고/차단</button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </Tab>
           <Tab eventKey="longer-tab" title="상품문의">
             <div className="qandaSection">
+              <div className="flex justify-between items-center border-b border-gray-200 pb-3 mb-4">
+                <h3 className="font-bold text-gray-700">상품문의 {qandaBox.length}</h3>
+                <button className="border border-gray-300 px-3 py-1.5 text-xs rounded bg-white hover:bg-gray-50 transition-colors">
+                  문의하기
+                </button>
+              </div>
               {
                 qandaBox.map((qa, index) => (
-                  <div className="qanda">
+                  <div key={qa.id || index} className="py-4 border-b border-gray-100 flex flex-col gap-1 text-sm">
+                    <div className="flex items-center space-x-2">
+                      {qa.isSecret && (
+                        <span className="text-gray-400 flex items-center text-xs">
+                          🔒 비밀글
+                        </span>
+                      )}
+
+                      <span className={`${qa.isSecret ? 'text-gray-400 italic' : 'text-gray-700'}`}>
+                        {qa.isSecret ? '비밀글입니다. 작성자와 관리자만 볼 수 있습니다.' : qa.contents}
+                      </span>
+                      <span className="text-[10px] bg-gray-50 text-gray-400 px-1.5 py-0.5 rounded border border-gray-100">
+                        {qa.contents}
+                      </span>
+                    </div>
+                    <div className="flex items-center space-x-2 text-xs text-gray-400 mt-1">
+                      <span className="font-medium">{qa.writer}</span>
+                      <span>|</span>
+                      <span>{qa.date}</span>
+                    </div>
 
                   </div>
-                ))
-              }
+                ))}
+              {qandaBox.length === 0 && (
+                <div className="text-center py-10 text-gray-400 text-sm">
+                  등록된 상품문의가 없습니다.
+                </div>
+              )}
             </div>
+            
           </Tab>
+          
           <Tab eventKey="contact" title="배송/교환/환불 안내">
-            <p className='text01' style={{width: '880px', margin: '0 auto', textAlign: 'justify', marginTop: '60px', color: '#444'}}>
+            <p className='text01' style={{ width: '880px', margin: '0 auto', textAlign: 'justify', marginTop: '60px', color: '#444' }}>
               고액결제의 경우 안전을 위해 카드사에서 확인전화를 드릴 수도 있습니다. 확인과정에서 도난 카드의 사용이나 타인 명의의 주문등 정상적인 주문이 아니라고 판단될 경우 임의로 주문을 보류 또는 취소할 수 있습니다.
 
               무통장 입금은 상품 구매 대금은 PC뱅킹, 인터넷뱅킹, 텔레뱅킹 혹은 가까운 은행에서 직접 입금하시면 됩니다.
               주문시 입력한 입금자명과 실제입금자의 성명이 반드시 일치하여야 하며, 7일 이내로 입금을 하셔야 하며 입금되지 않은 주문은 자동취소 됩니다.
             </p>
             <br />
-            <p className='text02' style={{width: '880px', margin: '0 auto', textAlign: 'justify' , color: '#444'}}>
+            <p className='text02' style={{ width: '880px', margin: '0 auto', textAlign: 'justify', color: '#444' }}>
               교환 및 반품이 가능한 경우
               - 단순변심, 착오구매에 따른 교환/반품 신청은 상품을 공급 받으신 날로부터 7일 이내 가능
               (교환/반품 왕복 배송비 5,000원 고객 부담)
-              - 공급 받으신 상품 및 용역의 내용이 표시/광고 내용과 다르거나 계약내용과 다르게 이행된 경우에는 공급 받은 날로부터 3개월 이내, 그 사실을 알게 된 날로부터 30일 이내 (배송비 회사 부담) 
+              - 공급 받으신 상품 및 용역의 내용이 표시/광고 내용과 다르거나 계약내용과 다르게 이행된 경우에는 공급 받은 날로부터 3개월 이내, 그 사실을 알게 된 날로부터 30일 이내 (배송비 회사 부담)
               - 교환/반품을 원하는 고객은 쇼핑몰의 [마이페이지주문내역조회]를 통해 신청, 신청 후 지정 택배사가 직접 방문하여 상품을 수거
               - 제품, 배송 문의는 카카오톡 채널 [링티] 또는 고객센터 [1544-5200]로 문의
               - 상품 구매 시 사은품/증정품 등이 제공된 경우, 상품 교환/반품 시 함께 동봉
@@ -281,7 +386,7 @@ export default function Detail() {
               ※ 단순 변심으로 인해 교환, 반품을 하실 경우 상품반송 비용은 고객님께서 부담해주셔야 합니다. (맛 교환 등 포함)
             </p>
             <br />
-            <p className='text03' style={{width: '880px', margin: '0 auto', textAlign: 'justify' , color: '#444'}}>
+            <p className='text03' style={{ width: '880px', margin: '0 auto', textAlign: 'justify', color: '#444' }}>
               배송 방법 : 택배
               배송 지역 : 전국지역
               배송 비용 : 무료

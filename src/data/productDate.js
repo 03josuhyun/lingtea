@@ -2750,7 +2750,7 @@ const reviews = [
     rating: 5,
     content: '밤샘 작업을 많이해서 누적된 피로감을 달고 살았는데 링티를 마시고부터 피로감이 덜했어요. 병원가서 링거 수액도 맞고 해보았지만 즉각 효과도 없었는데, 링티는 시원하게해서 마시면 정말 수분 보충에는 너무 완벽한 것 같습니다.',
     createdAt: '2026-09-20',
-    images: [process.env.PUBLIC_URL + '/assets/reviews/rev01_01.webp']
+    images: [process.env.PUBLIC_URL+'/assets/review/pro01_re01.jpeg']
   },
   {
     reviewId: 'rev02',
@@ -2759,7 +2759,7 @@ const reviews = [
     rating: 5,
     content: '한달 동안 마셔본 결과, 링티는 단순한 맛있는 음료라기보다 수분보충 + 피로회복 + 숙취해소에 확실한 도움이 되는 제품이었습니다. 앞으로도 집에 쟁여놓고 상황에 맞게 계속 이용할 것 같네요.',
     createdAt: '2026-08-11',
-    images: [process.env.PUBLIC_URL + '/assets/reviews/rev01_02.webp']
+    images: [process.env.PUBLIC_URL +'/assets/review/pro01_re02.jpg']
   },
   {
     reviewId: 'rev03',
@@ -2768,7 +2768,7 @@ const reviews = [
     rating: 5,
     content: '친구가 추천해줘서 먹었는데 피로감이 줄어든것 같아서 바로 구매했어요. 대학원생들에게는 꿀템이 될 것같아요',
     createdAt: '2026-08-04',
-    images: [process.env.PUBLIC_URL + '/assets/reviews/rev01_03.webp']
+    images: [process.env.PUBLIC_URL +'/assets/review/pro01_re03.jpg']
   },
   {
     reviewId: 'rev04',
@@ -2777,25 +2777,487 @@ const reviews = [
     rating: 5,
     content: '너무 아퍼서 먹지도 못하고 링거로 생활하다가 광고보고 사먹어 봤는데 힘을 주더라고요~ 밥도 조금씩 먹게 되고 너무너무 도움이 되었어요',
     createdAt: '2026-09-20',
-    images: [process.env.PUBLIC_URL + '/assets/reviews/rev01_01.webp']
+    images: [process.env.PUBLIC_URL +'/assets/review/pro01_re04.webp']
   },
   {
     reviewId: 'rev05',
     productId: 'product01',
-    userId: 'user123',
+    userId: 'qw***',
     rating: 5,
     content: '밤샘 작업을 많이해서 누적된 피로감을 달고 살았는데 링티를 마시고부터 피로감이 덜했어요. 병원가서 링거 수액도 맞고 해보았지만 즉각 효과도 없었는데, 링티는 시원하게해서 마시면 정말 수분 보충에는 너무 완벽한 것 같습니다.',
     createdAt: '2026-09-20',
-    images: [process.env.PUBLIC_URL + '/assets/reviews/rev01_01.webp']
+    images: [process.env.PUBLIC_URL +'/assets/review/pro01_re05.webp']
   },
+  /*product01*/
   {
     reviewId: 'rev06',
-    productId: 'product01',
-    userId: 'user123',
+    productId: 'product02',
+    userId: '3d***',
     rating: 5,
-    content: '밤샘 작업을 많이해서 누적된 피로감을 달고 살았는데 링티를 마시고부터 피로감이 덜했어요. 병원가서 링거 수액도 맞고 해보았지만 즉각 효과도 없었는데, 링티는 시원하게해서 마시면 정말 수분 보충에는 너무 완벽한 것 같습니다.',
+    content: '지난번 구입 후 두번째 구입입니다. 항상 물을 먹어도 수분이 채워지지 않는 느낌이였고, 또 많이 마시면 화장실만 자주 갈 뿐 수분이 채워진단 느낌이 없었는데 링티를 마시고 몸이 촉촉한 느낌이 듭니다. 특히 이 콜라겐 제품이 더욱 그렇습니다.',
     createdAt: '2026-09-20',
-    images: [process.env.PUBLIC_URL + '/assets/reviews/rev01_01.webp']
+    images: [process.env.PUBLIC_URL + '/assets/review/pro02_re01.webp']
+  },
+  {
+    reviewId: 'rev07',
+    productId: 'product02',
+    userId: 'uc***',
+    rating: 5,
+    content: '하루종일 건조한 사무실에서 일하다보니 피부가 푸석거리는데 링티 콜라겐의 효과를 믿고 구매해 봤어요!',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/review/pro02_re02.jpg']
+  },
+  {
+    reviewId: 'rev08',
+    productId: 'product02',
+    userId: 'df***',
+    rating: 5,
+    content: '지인이 링티 먹고 있어서 몇개 주더라고요. 한번 먹고 너무 좋아서 저도 주문했지요. 저는 나이가 50이라 콜라겐도 보충하고 싶어서 수분 콜라겐으로 주문했어요 맛도 좋고 수분도 채우고 콜라겐도 보충하고 1석3조네요.',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro02_re03.jpg']
+  },
+  {
+    reviewId: 'rev09',
+    productId: 'product02',
+    userId: 'zd***',
+    rating: 5,
+    content: '레몬맛 링티만 먹다가 콜라겐까지 같이 먹을 수 있는 오렌지맛 링티에 더 매력을 느꼈어요. 피부도 덜 늙는 느낌도 있고... 바꾸길 잘 한것 같아요',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro02_re04.jpg']
+  },
+  /*product02*/
+  {
+    reviewId: 'rev10',
+    productId: 'product03',
+    userId: '23***',
+    rating: 5,
+    content: '지인이 닷티로 체지방 감량에 성공했다하셔서 주문했어요. 저도 효과가 있기를... 맛은 있어요ㅎ',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re02.webp']
+  },
+  {
+    reviewId: 'rev11',
+    productId: 'product03',
+    userId: '23***',
+    rating: 5,
+    content: '지인 추천으로 먹기 시작했어요! 원래 운동을 병행하고 있었는데 뱃살은 빠지지 않았거든요. 닷티를 먹기 시작한 후부터 뱃살과 몸의 붓기가 빠지는게 느껴졌어요! 지인들도 살빠졌다고해서 추천해주고 있답니다. 저도 앞으로 꾸준히 구매할 것 같아요!',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re03.webp']
+  },
+  {
+    reviewId: 'rev12',
+    productId: 'product03',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },  
+  /*product03*/
+  {
+    reviewId: 'rev13',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '절반은 고3아이 둔 동네 엄마한체 선물했는데 너무 좋아하네요~ 안그래도 수능 앞두고 많이 지쳐보여서 걱정됐다고 너무 고마워해서 기분이 다 좋아요~ 저희 집 고2도 먹어보고 괜찮으면 수능 기간동안 먹여보려구요',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev14',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev15',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev16',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev17',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  /*product06*/
+  {
+    reviewId: 'rev18',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '절반은 고3아이 둔 동네 엄마한체 선물했는데 너무 좋아하네요~ 안그래도 수능 앞두고 많이 지쳐보여서 걱정됐다고 너무 고마워해서 기분이 다 좋아요~ 저희 집 고2도 먹어보고 괜찮으면 수능 기간동안 먹여보려구요',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev19',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev20',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev21',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev22',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  /*product07*/
+  {
+    reviewId: 'rev23',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '절반은 고3아이 둔 동네 엄마한체 선물했는데 너무 좋아하네요~ 안그래도 수능 앞두고 많이 지쳐보여서 걱정됐다고 너무 고마워해서 기분이 다 좋아요~ 저희 집 고2도 먹어보고 괜찮으면 수능 기간동안 먹여보려구요',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev24',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev25',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev26',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  /*product09*/
+  {
+    reviewId: 'rev27',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '절반은 고3아이 둔 동네 엄마한체 선물했는데 너무 좋아하네요~ 안그래도 수능 앞두고 많이 지쳐보여서 걱정됐다고 너무 고마워해서 기분이 다 좋아요~ 저희 집 고2도 먹어보고 괜찮으면 수능 기간동안 먹여보려구요',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev28',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev29',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev30',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  /*product11*/
+  {
+    reviewId: 'rev31',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev32',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '절반은 고3아이 둔 동네 엄마한체 선물했는데 너무 좋아하네요~ 안그래도 수능 앞두고 많이 지쳐보여서 걱정됐다고 너무 고마워해서 기분이 다 좋아요~ 저희 집 고2도 먹어보고 괜찮으면 수능 기간동안 먹여보려구요',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev33',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev34',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  /*product12*/
+  {
+    reviewId: 'rev35',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev36',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev13',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '절반은 고3아이 둔 동네 엄마한체 선물했는데 너무 좋아하네요~ 안그래도 수능 앞두고 많이 지쳐보여서 걱정됐다고 너무 고마워해서 기분이 다 좋아요~ 저희 집 고2도 먹어보고 괜찮으면 수능 기간동안 먹여보려구요',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev14',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev15',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  /*product13*/
+  {
+    reviewId: 'rev16',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev17',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev13',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '절반은 고3아이 둔 동네 엄마한체 선물했는데 너무 좋아하네요~ 안그래도 수능 앞두고 많이 지쳐보여서 걱정됐다고 너무 고마워해서 기분이 다 좋아요~ 저희 집 고2도 먹어보고 괜찮으면 수능 기간동안 먹여보려구요',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev14',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  /*product14*/
+  {
+    reviewId: 'rev15',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev16',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev17',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev13',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '절반은 고3아이 둔 동네 엄마한체 선물했는데 너무 좋아하네요~ 안그래도 수능 앞두고 많이 지쳐보여서 걱정됐다고 너무 고마워해서 기분이 다 좋아요~ 저희 집 고2도 먹어보고 괜찮으면 수능 기간동안 먹여보려구요',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev14',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  /*product15*/
+  {
+    reviewId: 'rev15',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev16',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev17',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev13',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '절반은 고3아이 둔 동네 엄마한체 선물했는데 너무 좋아하네요~ 안그래도 수능 앞두고 많이 지쳐보여서 걱정됐다고 너무 고마워해서 기분이 다 좋아요~ 저희 집 고2도 먹어보고 괜찮으면 수능 기간동안 먹여보려구요',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  /*product17*/
+  {
+    reviewId: 'rev14',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev15',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev16',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+  },
+  {
+    reviewId: 'rev17',
+    productId: 'product06',
+    userId: '23***',
+    rating: 5,
+    content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
+    createdAt: '2026-09-20',
+    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
   },
 ]
 

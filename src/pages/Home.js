@@ -270,7 +270,7 @@ export default function Home() {
             특전사 훈련 현장에서 마주한 갈증을 해결하기위해, 군의관들이 직접 연구하고 <br />
             설계하여 체내 흡수율을 극대화했습니다.
           </p>
-          <button className='brandbtn'>
+          <button className='brandbtn' onClick={()=> navigate('/brand')}>
             브랜드 스토리
           </button>
         </div>

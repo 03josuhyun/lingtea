@@ -1,10 +1,12 @@
 //import logo from './logo.svg';
+import '@flaticon/flaticon-uicons/css/regular/rounded.css';
 import './App.css';
 
 import { Button, Container, Form, Nav, Navbar, Offcanvas } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Routes, Route, useNavigate , useLocation} from 'react-router-dom';
+import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 //import { useState } from 'react';
+import { useState, useEffect } from 'react';
 //import productDate from './data/productDate';
 
 import Home from './pages/Home';
@@ -20,8 +22,40 @@ function App() {
 
   const navigate = useNavigate();
   const location = useLocation();
+  const [showButton, setShowButton] = useState(false);
+  useEffect(() => {
+    const handleShowButton = () => {
+      if (window.scrollY > 300) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleShowButton);
+    return() => {
+      window.removeEventListener('scroll',handleShowButton);
+    };
+  }, []);
+
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
   return (
     <div className="App">
+      {
+        showButton && (
+          <div style={{position: 'fixed', bottom: '60px', right: '50px', zIndex: 100}}>
+            <button onClick={scrollToTop} style={{ width: '50px', height: '50px', backgroundColor: '#008BE5', color: 'white', borderRadius: '50%', border: 'none', fontSize: '20px'}}>
+              Top
+            </button>
+          </div>
+        )
+      }
 
       <Navbar className='nav' expand="sm">
         <Container fluid>
@@ -43,11 +77,11 @@ function App() {
               <Nav className="gnb">
                 <Nav.Link
                   className={`lnb lnb01 ${location.pathname === '/home' ? 'active' : ''}`}
-                  onClick={() => {navigate('/') }}
+                  onClick={() => { navigate('/') }}
                 >홈</Nav.Link>
                 <Nav.Link
                   className={`lnb lnb01 ${location.pathname === '/brand' ? 'active' : ''}`}
-                  onClick={() => {navigate('/brand') }}
+                  onClick={() => { navigate('/brand') }}
                 >브랜드</Nav.Link>
                 <Nav.Link
                   className={`lnb lnb01 ${location.pathname === '/product' ? 'active' : ''}`}
@@ -73,10 +107,10 @@ function App() {
                 <Button variant="outline-success">Search</Button>
               </Form>
               <button className='loginbtn' onClick={() => navigate('/login')}>
-                <img src={process.env.PUBLIC_URL + '/assets/loginbtn.png'} alt="" />
+                <i className="fi fi-rr-user" style={{ fontSize: '30px', lineHeight:'20px' }}></i>
               </button>
               <button className='btncart' onClick={() => navigate('/cart')}>
-                <img src={process.env.PUBLIC_URL + '/assets/cartbtn.png'} alt="" />
+                <i className="fi fi-rr-basket-shopping-simple" style={{fontSize: '30px', lineHeight: '20px'}}></i>
               </button>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
