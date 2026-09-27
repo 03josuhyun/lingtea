@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/lingtea/static/css/main.33eb097c.css",
-    "main.js": "/lingtea/static/js/main.640cde10.js",
+    "main.css": "/lingtea/static/css/main.09df1400.css",
+    "main.js": "/lingtea/static/js/main.38a7a9c8.js",
     "static/js/453.c7dcc541.chunk.js": "/lingtea/static/js/453.c7dcc541.chunk.js",
+    "static/media/uicons-regular-rounded-ESQGLQQ4.eot": "/lingtea/static/media/uicons-regular-rounded-ESQGLQQ4.9ac4298c39b2d61ec7b0.eot",
+    "static/media/uicons-regular-rounded-KDJ23353.woff": "/lingtea/static/media/uicons-regular-rounded-KDJ23353.617b7e86cf6814a44b46.woff",
+    "static/media/uicons-regular-rounded-J3WOUERV.woff2": "/lingtea/static/media/uicons-regular-rounded-J3WOUERV.213a21995bbd5d1a3aa9.woff2",
     "index.html": "/lingtea/index.html",
-    "main.33eb097c.css.map": "/lingtea/static/css/main.33eb097c.css.map",
-    "main.640cde10.js.map": "/lingtea/static/js/main.640cde10.js.map",
+    "main.09df1400.css.map": "/lingtea/static/css/main.09df1400.css.map",
+    "main.38a7a9c8.js.map": "/lingtea/static/js/main.38a7a9c8.js.map",
     "453.c7dcc541.chunk.js.map": "/lingtea/static/js/453.c7dcc541.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.33eb097c.css",
-    "static/js/main.640cde10.js"
+    "static/css/main.09df1400.css",
+    "static/js/main.38a7a9c8.js"
   ]
 }
