@@ -17,6 +17,7 @@ import Event from './pages/Event';
 import Best from './pages/Best';
 import Brand from './pages/Brand';
 import Login from './pages/Login';
+import Like from './pages/Like';
 
 function App() {
 
@@ -103,14 +104,18 @@ function App() {
                   placeholder="Search"
                   className="me-2"
                   aria-label="Search"
+                  style={{borderRadius: '20px'}}
                 />
-                <Button variant="outline-success">Search</Button>
+                <Button className='searchbtn'>검색</Button>
               </Form>
               <button className='loginbtn' onClick={() => navigate('/login')}>
                 <i className="fi fi-rr-user" style={{ fontSize: '30px', lineHeight:'20px' }}></i>
               </button>
               <button className='btncart' onClick={() => navigate('/cart')}>
                 <i className="fi fi-rr-basket-shopping-simple" style={{fontSize: '30px', lineHeight: '20px'}}></i>
+              </button>
+              <button className='heartbtn' onClick={()=> navigate('/like')}>
+                <i class="fi fi-rr-heart" style={{fontSize: '30px', lineHeight: '20px'}}></i>
               </button>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
@@ -126,6 +131,7 @@ function App() {
         <Route path='best' element={<Best />} />
         <Route path='login' element={<Login />} />
         <Route path='cart' element={<Cart />} />
+        <Route path='like' element={<Like />} />
       </Routes>
 
       <div className="footer">

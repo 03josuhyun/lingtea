@@ -1,12 +1,13 @@
 import React from "react";
-//import Product from "../pages/Product";
-//import productData from "../data/productDate";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from 'react-redux';
 import styled from "styled-components";
+import { addLike } from "../pages/store";
 
-const ProductCard = ({ product, onCartClick }) => {
+const ProductCard = ({ product, onCartClick, onHeartClick }) => {
 
   const navigate = useNavigate();
+  const dispatch = useDispatch(); 
 
   return (
 
@@ -38,9 +39,19 @@ const ProductCard = ({ product, onCartClick }) => {
           <img src={process.env.PUBLIC_URL + '/assets/btncart.png'} alt="장바구니" />
         </Cartbtn>
         <Heartbtn
+
           onClick={(e) => {
             e.preventDefault();
             e.stopPropagation();
+
+
+            try {
+              dispatch(addLike(product));
+              alert("찜하기에 담겼습니다.");
+            } catch (error) {
+              console.error("찜하기 중 리덕스 에러 발생:", error);
+              alert("찜하기 담는 중 오류가 발생했습니다.");
+            }
           }}
         >
           <img src={process.env.PUBLIC_URL + '/assets/btnheart.png'} alt="" />
@@ -139,32 +150,32 @@ img {
   }
 `;
 
-const ItemInfo = styled.div `
+const ItemInfo = styled.div`
 height: 240px;
 padding: 10px;
 `;
 
-const ItemTitle = styled.p `
+const ItemTitle = styled.p`
 font-size: 20px;
 font-weight: blod;
 `;
 
-const ItemSmallTitle = styled.p `
+const ItemSmallTitle = styled.p`
 font-size: 16px;
 color: #777;
 `;
 
-const PriceBox = styled.div `
+const PriceBox = styled.div`
 display: flex;
 margin-top: 10px;
 `;
 
-const Price = styled.p `
+const Price = styled.p`
 font-size: 20px;
 font-weight: normal;
 `;
 
-const Delprice = styled.del `
+const Delprice = styled.del`
 display: inline-block;
 font-size: 16px;
 font-weight: normal;
@@ -172,7 +183,7 @@ color: #777;
 margin: 4px;
 `;
 
-const Pricedetail = styled.span `
+const Pricedetail = styled.span`
 border-radius: 10px;
 color: #008bfc;
 background-color: #ebf4fc;

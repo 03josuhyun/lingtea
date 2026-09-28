@@ -20,7 +20,6 @@ p {
 
 .App {
   width: 100%;
-  background-color: aliceblue;
 }
 
 .App .nav {
@@ -47,6 +46,18 @@ p {
 .gnb .lnb.nav-link.active {
   color: #008BE5;
   font-weight: bold;
+}
+.searchbtn {
+  width: 80px !important;
+  border-radius: 20px !important;
+  border: 1px solid #008be5 !important;
+  background-color: white !important;
+  color: #008be5 !important;          
+  text-align: center;
+}
+.searchbtn:hover {
+  background-color: #008be5 !important; 
+  color: white !important;    
 }
 
 .loginbtn {
@@ -81,6 +92,20 @@ p {
   color: #008BE5;
 }
 
+.heartbtn {
+  width: 40px; height: 40px;
+  border: none;
+  background-color: white;
+  border-radius: 10px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+.heartbtn:hover {
+  color: #008BE5;
+}
 .footer {
   overflow: hidden;
   width: 100%;

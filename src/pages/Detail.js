@@ -11,7 +11,7 @@ export default function Detail() {
   const { id } = useParams();
   const { data } = productData;
 
-  const product = data.find((item) => item.id === id);
+  const product = data.find((item) => String(item.id) === String(id)) || {};
 
   const [mainImage, setMainImage] = useState(product ? product.image : '');
 
@@ -61,7 +61,7 @@ export default function Detail() {
   };
   const totalCount = selectedItems.reduce((acc, item) => acc + item.count, 0);
   const totalPrice = selectedItems.reduce((acc, item) => {
-    return acc + (product.price + item.extraPrice) * item.count;
+    return acc + ((product.price || 0) + item.extraPrice) * item.count;
   }, 0);
 
   const handleMainChange = (e) => {
@@ -138,7 +138,7 @@ export default function Detail() {
             <div className="detailMid">
               <div className="txt">
                 <p>구매적립금</p>
-                <p>{Math.floor(product.price * 0.01).toLocaleString()}원</p>
+                <p>{Math.floor((product.price || 0) * 0.01).toLocaleString()}원</p>
               </div>
               <div className="txt">
                 <p>배송비</p>
@@ -165,7 +165,7 @@ export default function Detail() {
                   onChange={handleSubChange}
                 >
                   <option value="">- [필수] 사은품/추가 구성을 선택해주세요 -</option>
-                  {product.subOptions.map((sub) => (
+                  {product.subOptions && product.subOptions.map((sub) => (
                     <option key={sub.id} value={sub.id}>
                       {sub.name} {sub.extraPrice !== 0 ? `(${sub.extraPrice.toLocaleString()}원)` : ''}
                     </option>
@@ -230,12 +230,7 @@ export default function Detail() {
 
         </div>
 
-        <Tabs
-          defaultActiveKey="profile"
-          id="fill-tab-example"
-          className="mb-3"
-          fill
-        >
+        <Tabs defaultActiveKey="home" id="fill-tab-example" className="mb-3" fill>
           <Tab eventKey="home" title="상세정보" >
             <div className="detailContents" >
               {
@@ -249,7 +244,7 @@ export default function Detail() {
           <Tab eventKey="profile" title="상품후기">
             <div className="reviewSection" style={{ width: '880px', margin: '50px auto' }}>
               <div className="reviewTop">
-                <p className="reviewTitle01" style={{ fontSize: '30px' }}>
+                <p className="reviewTitle01" style={{ fontSize: '26px' }}>
                   Review
                 </p>
                 <div className="reviewTopImage" style={{ display: 'flex', justifyContent: 'space-between', margin: '30px auto' }}>
@@ -264,7 +259,7 @@ export default function Detail() {
                 <p className="reviewTitle02" style={{ fontSize: '24px', }}>
                   리뷰 {matchedReviews.length}
                 </p>
-                <div className="reaviewTabs" style={{ display: 'flex', justifyContent: 'space-between', padding: '20px 10px', borderBottom: '1px soild black', }}>
+                <div className="reaviewTabs" style={{ display: 'flex', justifyContent: 'space-between', padding: '20px 10px', borderBottom: '1px solid black', }}>
                   <p>포토</p>
                   <select name="" id="">
                     <option value="">추천순</option>
@@ -275,39 +270,34 @@ export default function Detail() {
               </div>
               <div className="reviewBot">
                 {matchedReviews.map((review) => (
-                  <div key={review.reviewId} className="py-4 border-b border-gray-100 flex gap-6" style={{ borderBottom: '1px solid #ccc' }}>
-                    <div className="w-32 flex-shrink-0 text-xs text-gray-400 space-y-1">
-                      <div className="font-medium text-gray-600">{review.userId}</div>
-                      <div className="pt-2 text-gray-300">{review.createdAt} 작성</div>
+                  <div key={review.reviewId} style={{ borderBottom: '1px solid #ccc', padding: '20px 0' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '5px 20px', borderBottom: '1px solid #eee'}}>
+                      <div style={{fontSize: '16px', color: '#444'}}>{review.userId}</div>
+                      <div style={{fontSize: '14px', color: '#444'}}>{review.createdAt} 작성</div>
                     </div>
-                    <div className="flex-1 space-y-2">
-                      <div className="flex items-center space-x-2">
-                        <div className="flex text-amber-400 text-sm">{renderStars(review.rating)}</div>
+                    <div style={{ padding: '10px'}}>
+                      <div style={{display: 'flex', justifyContent: 'space-between', padding: '10px 0'}}>
+                        <div>{renderStars(review.rating)}</div>
                         {review.rating === 5 && (
-                          <span className="text-[10px] bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded border border-gray-200">
+                          <span style={{color: '#444', fontSize: '14px'}}>
                             재구매
                           </span>
                         )}
                       </div>
-                      <div className="flex items-center space-x-1 text-xs text-gray-500">
-                        <span className="inline-block bg-blue-600 text-white font-bold px-1 rounded text-[10px]">1</span>
+                      <div style={{padding: '10px 0'}}>
                         <span>상품 ID: {review.productId}</span>
                       </div>
                       <p className="text-sm text-gray-600 leading-relaxed">
                         {review.content}
                       </p>
-
-                      <button className="text-xs text-gray-400 flex items-center hover:underline" style={{ border: '1px solid #ccc', borderRadius: '20px', padding: '3px 10px', backgroundColor: 'white' }}>
-                        접기 ▴
-                      </button>
                       {review.images && review.images.length > 0 && (
-                        <div className="w-24 h-24 bg-gray-100 rounded overflow-hidden mt-2">
-                          <img src={review.images[0]} alt="Review attached" className="w-full h-full object-cover" style={{ width: '150px', height: '150px' }} />
+                        <div>
+                          <img src={review.images[0]} alt="Review image" style={{ width: '150px', height: '150px', borderRadius: '10px', margin: '10px 0' }} />
                         </div>
                       )}
-                      <div className="flex space-x-4 pt-2 text-xs text-gray-400">
-                        <button className="hover:text-gray-600" style={{ border: 'none', backgroundColor: '#eee', borderRadius: '10px', padding: '2px 5px', margin: '0 10px' }}>💬 댓글 0</button>
-                        <button className="hover:text-gray-600" style={{ border: 'none', backgroundColor: '#eee', borderRadius: '10px', padding: '2px 5px' }}>🚨 신고/차단</button>
+                      <div style={{padding: '10px 0'}}>
+                        <button style={{ border: 'none', backgroundColor: '#eee', borderRadius: '10px', padding: '2px 5px', margin: '0 10px' }}>💬 댓글 0</button>
+                        <button style={{ border: 'none', backgroundColor: '#eee', borderRadius: '10px', padding: '2px 5px' }}>신고/차단</button>
                       </div>
                     </div>
                   </div>
@@ -316,47 +306,39 @@ export default function Detail() {
             </div>
           </Tab>
           <Tab eventKey="longer-tab" title="상품문의">
-            <div className="qandaSection">
-              <div className="flex justify-between items-center border-b border-gray-200 pb-3 mb-4">
-                <h3 className="font-bold text-gray-700">상품문의 {qandaBox.length}</h3>
-                <button className="border border-gray-300 px-3 py-1.5 text-xs rounded bg-white hover:bg-gray-50 transition-colors">
+            <div className="qandaSection" style={{ width: '880px', margin: '50px auto' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', margin: '30px auto' }}>
+                <h3 className='qandaTitle' style={{ fontSize: '26px' }}>상품문의 ({qandaBox.length})</h3>
+                <button className='qandaAddBtn' style={{ fontSize: '14px', border: '1px solid #ccc', borderRadius: '20px', padding: '0px 10px', backgroundColor: 'white' }}>
                   문의하기
                 </button>
               </div>
               {
                 qandaBox.map((qa, index) => (
-                  <div key={qa.id || index} className="py-4 border-b border-gray-100 flex flex-col gap-1 text-sm">
-                    <div className="flex items-center space-x-2">
+                  <div key={qa.id || index} style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 20px', borderBottom: '1px solid #ddd' }}>
+                    <span style={{ width: '20%' }}>{qa.writer}</span>
+                    <div className='qanda' style={{ textAlign: 'center', padding: '0 20px', width: '50%' }}>
                       {qa.isSecret && (
-                        <span className="text-gray-400 flex items-center text-xs">
-                          🔒 비밀글
+                        <span style={{ fontSize: '20px', height: '20px' }}>
+                          <i className="fi fi-rr-lock" style={{ margin: '0 5px', fontSize: '16px' }}></i>비밀글
                         </span>
                       )}
-
-                      <span className={`${qa.isSecret ? 'text-gray-400 italic' : 'text-gray-700'}`}>
-                        {qa.isSecret ? '비밀글입니다. 작성자와 관리자만 볼 수 있습니다.' : qa.contents}
-                      </span>
-                      <span className="text-[10px] bg-gray-50 text-gray-400 px-1.5 py-0.5 rounded border border-gray-100">
-                        {qa.contents}
+                      <span style={{ fontSize: '14px', color: '#777', margin: '0 5px' }}>
+                        ({qa.contents})
                       </span>
                     </div>
-                    <div className="flex items-center space-x-2 text-xs text-gray-400 mt-1">
-                      <span className="font-medium">{qa.writer}</span>
-                      <span>|</span>
-                      <span>{qa.date}</span>
-                    </div>
-
+                    <span style={{ width: '20%', textAlign: 'center' }}>{qa.date}</span>
                   </div>
                 ))}
               {qandaBox.length === 0 && (
-                <div className="text-center py-10 text-gray-400 text-sm">
+                <div>
                   등록된 상품문의가 없습니다.
                 </div>
               )}
             </div>
-            
+
           </Tab>
-          
+
           <Tab eventKey="contact" title="배송/교환/환불 안내">
             <p className='text01' style={{ width: '880px', margin: '0 auto', textAlign: 'justify', marginTop: '60px', color: '#444' }}>
               고액결제의 경우 안전을 위해 카드사에서 확인전화를 드릴 수도 있습니다. 확인과정에서 도난 카드의 사용이나 타인 명의의 주문등 정상적인 주문이 아니라고 판단될 경우 임의로 주문을 보류 또는 취소할 수 있습니다.

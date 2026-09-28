@@ -3,7 +3,6 @@ import '../style/cart.css'
 import productDate from '../data/productDate';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteItem, addCount, subCount, addItem } from './store';
-//import { Outlet } from 'react-router-dom';
 
 export default function Cart() {
 
@@ -67,50 +66,6 @@ export default function Cart() {
               </div>
               <p>장바구니 보관기간은 30일입니다.</p>
             </div>
-            {/* <div className="cartItemBox">
-              {
-
-
-                state.cart.map((item, i) => {
-                  return (
-                    <div className="cart" key={i}>
-
-                      <div className="cartImg">
-                        <input type="checkbox" name="" id="cartItemChk" />
-                        <img src={state.cart[i].image} alt={state.cart[i].title} />
-                      </div>
-                      <div className="cartDetail">
-                        <button className='giftbtn'>
-                          <img src={process.env.PUBLIC_URL + '/assets/gift.png'} alt="" /> 선물하기
-                        </button>
-                        <p className="cartName">
-                          {state.cart[i].title}
-                        </p>
-                        <p className='cartOption'>
-                          {state.cart[i].option}
-                        </p>
-                        <p className='cartPay'>
-                          {state.cart[i].price.toLocaleString()}원
-                        </p>
-                        <div className="cartBtn">
-                          <button className='btn_min' onClick={() => dispatch(subCount(state.cart[i].id))}>
-                            -
-                          </button>
-                          <span>1</span>
-                          <button className='btn_pluse' onClick={() => dispatch(addCount(state.cart[i].id))}>
-                            +
-                          </button>
-                          
-                        </div>
-                        <button className='cartDelte' onClick={() => dispatch(deleteItem(state.cart[i].id))}>
-                            <img src={process.env.PUBLIC_URL + '/assets/x.png'} alt="" />
-                          </button>
-                      </div>
-                    </div>
-                  )
-                })
-              }
-            </div> */}
             <div className="cartItemBox">
               {
                 state.cart.map((item) => {

@@ -13,8 +13,15 @@ export default function Home() {
   const { data: bestProducts, tabData, eventInfo } = productDate;
   const [activeTab, setActiveTab] = useState('recovery');
   const [activeTab01, setActiveTab01] = useState('origainal');
+  const [activeTab02, setActiveTab02] = useState('collagen');
+  const [activeTab03, setActiveTab03] = useState('allcare');
+  const [activeTab04, setActiveTab04] = useState('terathy');
+  const [activeTab05, setActiveTab05] = useState('impact');
+  const [activeTab06, setActiveTab06] = useState('synergy');
+  const [activeTab07, setActiveTab07] = useState('gear');
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [startIndex, setStartIndex] = useState(0);
 
   return (
     <>
@@ -119,7 +126,7 @@ export default function Home() {
                     <div className="sheetTab">
                       {
                         tabData.diet.tabs.map((tabs) => (
-                          <button key={tabs.id} className={activeTab01 === tabs.id ? 'on01' : ''} onClick={() => setActiveTab01(tabs.id)} >
+                          <button key={tabs.id} className={activeTab02 === tabs.id ? 'on01' : ''} onClick={() => setActiveTab02(tabs.id)} >
                             <img src={tabs.image} alt="tabimg" />
                             {tabs.name}
                           </button>
@@ -129,7 +136,7 @@ export default function Home() {
                     <div className="sheetsheet">
                       {
                         tabData.diet.tabs.map((tabs) => (
-                          activeTab01 === tabs.id && (
+                          activeTab02 === tabs.id && (
                             <img key={tabs.id} src={tabs.sheet} alt={tabs.name} />
                           )
                         ))
@@ -142,7 +149,7 @@ export default function Home() {
                     <div className="sheetTab">
                       {
                         tabData.vitamin.tabs.map((tabs) => (
-                          <button key={tabs.id} className={activeTab01 === tabs.id ? 'on01' : ''} onClick={() => setActiveTab01(tabs.id)} >
+                          <button key={tabs.id} className={activeTab03 === tabs.id ? 'on01' : ''} onClick={() => setActiveTab03(tabs.id)} >
                             <img src={tabs.image} alt="tabimg" />
                             {tabs.name}
                           </button>
@@ -152,7 +159,7 @@ export default function Home() {
                     <div className="sheetsheet">
                       {
                         tabData.vitamin.tabs.map((tabs) => (
-                          activeTab01 === tabs.id && (
+                          activeTab03 === tabs.id && (
                             <img key={tabs.id} src={tabs.sheet} alt={tabs.name} />
                           )
                         ))
@@ -165,7 +172,7 @@ export default function Home() {
                     <div className="sheetTab">
                       {
                         tabData.sleep.tabs.map((tabs) => (
-                          <button key={tabs.id} className={activeTab01 === tabs.id ? 'on01' : ''} onClick={() => setActiveTab01(tabs.id)} >
+                          <button key={tabs.id} className={activeTab04 === tabs.id ? 'on01' : ''} onClick={() => setActiveTab04(tabs.id)} >
                             <img src={tabs.image} alt="tabimg" />
                             {tabs.name}
                           </button>
@@ -175,7 +182,7 @@ export default function Home() {
                     <div className="sheetsheet">
                       {
                         tabData.sleep.tabs.map((tabs) => (
-                          activeTab01 === tabs.id && (
+                          activeTab04 === tabs.id && (
                             <img key={tabs.id} src={tabs.sheet} alt={tabs.name} />
                           )
                         ))
@@ -188,7 +195,7 @@ export default function Home() {
                     <div className="sheetTab">
                       {
                         tabData.protein.tabs.map((tabs) => (
-                          <button key={tabs.id} className={activeTab01 === tabs.id ? 'on01' : ''} onClick={() => setActiveTab01(tabs.id)} >
+                          <button key={tabs.id} className={activeTab05 === tabs.id ? 'on01' : ''} onClick={() => setActiveTab05(tabs.id)} >
                             <img src={tabs.image} alt="tabimg" />
                             {tabs.name}
                           </button>
@@ -198,7 +205,7 @@ export default function Home() {
                     <div className="sheetsheet">
                       {
                         tabData.protein.tabs.map((tabs) => (
-                          activeTab01 === tabs.id && (
+                          activeTab05 === tabs.id && (
                             <img key={tabs.id} src={tabs.sheet} alt={tabs.name} />
                           )
                         ))
@@ -211,7 +218,7 @@ export default function Home() {
                     <div className="sheetTab">
                       {
                         tabData.energy.tabs.map((tabs) => (
-                          <button key={tabs.id} className={activeTab01 === tabs.id ? 'on01' : ''} onClick={() => setActiveTab01(tabs.id)} >
+                          <button key={tabs.id} className={activeTab06 === tabs.id ? 'on01' : ''} onClick={() => setActiveTab06(tabs.id)} >
                             <img src={tabs.image} alt="tabimg" />
                             {tabs.name}
                           </button>
@@ -221,7 +228,7 @@ export default function Home() {
                     <div className="sheetsheet">
                       {
                         tabData.energy.tabs.map((tabs) => (
-                          activeTab01 === tabs.id && (
+                          activeTab06 === tabs.id && (
                             <img key={tabs.id} src={tabs.sheet} alt={tabs.name} />
                           )
                         ))
@@ -234,7 +241,7 @@ export default function Home() {
                     <div className="sheetTab">
                       {
                         tabData.health.tabs.map((tabs) => (
-                          <button key={tabs.id} className={activeTab01 === tabs.id ? 'on01' : ''} onClick={() => setActiveTab01(tabs.id)} >
+                          <button key={tabs.id} className={activeTab07 === tabs.id ? 'on01' : ''} onClick={() => setActiveTab07(tabs.id)} >
                             <img src={tabs.image} alt="tabimg" />
                             {tabs.name}
                           </button>
@@ -244,7 +251,7 @@ export default function Home() {
                     <div className="sheetsheet">
                       {
                         tabData.health.tabs.map((tabs) => (
-                          activeTab01 === tabs.id && (
+                          activeTab07 === tabs.id && (
                             <img key={tabs.id} src={tabs.sheet} alt={tabs.name} />
                           )
                         ))
@@ -282,12 +289,12 @@ export default function Home() {
           <p className='title08'>더 큰 혜택과 즐거움을 드려요!</p>
         </div>
         <div className="eventBox">
-          <button className='event_prev'>
+          <button className='event_prev' onClick={() => setStartIndex(prev => Math.max(0, prev - 1))}>
             <img src={process.env.PUBLIC_URL + '/assets/btnprev.png'} alt="" />
           </button>
           <div className="event">
             {
-              eventInfo.slice(0, 3).map((event) => {
+              eventInfo && eventInfo.slice(startIndex, startIndex + 3).map((event) => {
                 return (
                   <div className="eventItem" key={event.id}>
                     <div className="eventImg">
@@ -300,7 +307,12 @@ export default function Home() {
               })
             }
           </div>
-          <button className='event_next'>
+          <button className='event_next' onClick={() => setStartIndex(prev => {
+        if (eventInfo && prev + 3 < eventInfo.length) {
+          return prev + 1;
+        }
+        return prev;
+      })}>
             <img src={process.env.PUBLIC_URL + '/assets/btnnext.png'} alt="" />
           </button>
         </div>

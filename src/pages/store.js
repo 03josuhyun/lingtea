@@ -33,10 +33,23 @@ const cart = createSlice ({
   },
 });
 
+const likeItem = createSlice({
+  name: 'likeItem',
+  initialState: [],
+  reducers: {
+    addLike(state, action) {
+      state.push(action.payload);
+    }
+  }
+});
+
 export const { addItem, deleteItem, addCount, subCount } = cart.actions;
+export const { addLike } = likeItem.actions;
+
 export default configureStore({
   reducer: {
     cart: cart.reducer,
+    likeItem: likeItem.reducer,
   },
 })
 
