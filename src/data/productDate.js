@@ -2814,7 +2814,7 @@ const reviews = [
     rating: 5,
     content: '지인이 링티 먹고 있어서 몇개 주더라고요. 한번 먹고 너무 좋아서 저도 주문했지요. 저는 나이가 50이라 콜라겐도 보충하고 싶어서 수분 콜라겐으로 주문했어요 맛도 좋고 수분도 채우고 콜라겐도 보충하고 1석3조네요.',
     createdAt: '2026-09-20',
-    images: [process.env.PUBLIC_URL + '/assets/reviews/pro02_re03.jpg']
+    images: [process.env.PUBLIC_URL +'/assets/review/pro02_re03.jpg']
   },
   {
     reviewId: 'rev09',
@@ -2823,7 +2823,7 @@ const reviews = [
     rating: 5,
     content: '레몬맛 링티만 먹다가 콜라겐까지 같이 먹을 수 있는 오렌지맛 링티에 더 매력을 느꼈어요. 피부도 덜 늙는 느낌도 있고... 바꾸길 잘 한것 같아요',
     createdAt: '2026-09-20',
-    images: [process.env.PUBLIC_URL + '/assets/reviews/pro02_re04.jpg']
+    images: [process.env.PUBLIC_URL +'/assets/review/pro02_re04.jpg']
   },
   /*product02*/
   {
@@ -2833,7 +2833,7 @@ const reviews = [
     rating: 5,
     content: '지인이 닷티로 체지방 감량에 성공했다하셔서 주문했어요. 저도 효과가 있기를... 맛은 있어요ㅎ',
     createdAt: '2026-09-20',
-    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re02.webp']
+    images: [process.env.PUBLIC_URL + '/assets/review/pro03_re02.webp']
   },
   {
     reviewId: 'rev11',
@@ -2842,7 +2842,7 @@ const reviews = [
     rating: 5,
     content: '지인 추천으로 먹기 시작했어요! 원래 운동을 병행하고 있었는데 뱃살은 빠지지 않았거든요. 닷티를 먹기 시작한 후부터 뱃살과 몸의 붓기가 빠지는게 느껴졌어요! 지인들도 살빠졌다고해서 추천해주고 있답니다. 저도 앞으로 꾸준히 구매할 것 같아요!',
     createdAt: '2026-09-20',
-    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re03.webp']
+    images: [process.env.PUBLIC_URL + '/assets/review/pro03_re03.webp']
   },
   {
     reviewId: 'rev12',
@@ -2851,7 +2851,7 @@ const reviews = [
     rating: 5,
     content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
     createdAt: '2026-09-20',
-    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+    images: [process.env.PUBLIC_URL + '/assets/review/pro03_re01.webp']
   },  
   /*product03*/
   {
@@ -2859,9 +2859,9 @@ const reviews = [
     productId: 'product06',
     userId: '23***',
     rating: 5,
-    content: '절반은 고3아이 둔 동네 엄마한체 선물했는데 너무 좋아하네요~ 안그래도 수능 앞두고 많이 지쳐보여서 걱정됐다고 너무 고마워해서 기분이 다 좋아요~ 저희 집 고2도 먹어보고 괜찮으면 수능 기간동안 먹여보려구요',
+    content: '절반은 ',
     createdAt: '2026-09-20',
-    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+    images: [process.env.PUBLIC_URL + '/assets/review/pro03_re01.webp']
   },
   {
     reviewId: 'rev14',
@@ -2870,7 +2870,7 @@ const reviews = [
     rating: 5,
     content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
     createdAt: '2026-09-20',
-    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+    images: [process.env.PUBLIC_URL + '/assets/review/pro03_re01.webp']
   },
   {
     reviewId: 'rev15',
@@ -2879,7 +2879,7 @@ const reviews = [
     rating: 5,
     content: '마른체형이지만 허리라인은 없었지고 아랫배가 나와서 고민이었는데 주 4회 운동할때 물대신 마셨고 마신지 2주정도 지나면서 조금씩 효과를 봤어요. 이런 놀라운 효과를 보고나니 가격부담은 1도 없이 사라졌어요. 재구매는 물론 지인들까지 함께 마시고있습니다',
     createdAt: '2026-09-20',
-    images: [process.env.PUBLIC_URL + '/assets/reviews/pro03_re01.webp']
+    images: [process.env.PUBLIC_URL + '/assets/review/pro03_re01.webp']
   },
   {
     reviewId: 'rev16',

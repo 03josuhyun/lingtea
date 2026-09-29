@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { addItem } from './store';
 import { useDispatch } from 'react-redux';
 import ProductCard from '../components/item';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 
 export default function Home() {
@@ -22,6 +22,8 @@ export default function Home() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [startIndex, setStartIndex] = useState(0);
+
+  
 
   return (
     <>
@@ -290,7 +292,7 @@ export default function Home() {
         </div>
         <div className="eventBox">
           <button className='event_prev' onClick={() => setStartIndex(prev => Math.max(0, prev - 1))}>
-            <img src={process.env.PUBLIC_URL + '/assets/btnprev.png'} alt="" />
+            <i className="fi fi-rr-angle-left" style={{fontSize: '32px'}}></i>
           </button>
           <div className="event">
             {
@@ -313,7 +315,7 @@ export default function Home() {
         }
         return prev;
       })}>
-            <img src={process.env.PUBLIC_URL + '/assets/btnnext.png'} alt="" />
+            <i className="fi fi-rr-angle-right" style={{fontSize: '32px'}}></i>
           </button>
         </div>
       </div>

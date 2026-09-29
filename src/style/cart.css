@@ -20,11 +20,11 @@
     .cartSection {
       width: 1180px;
       margin: 0 auto;
+      padding: 90px 0;
     }
     .cartSection .cartTitle {
       font-size: 28px;
       font-weight: bold;
-      margin-top: 90px;
     }
     .cartSection .cartAdd {
       border-radius: 20px;
@@ -246,7 +246,6 @@
     }
     .cartSection .cartBox .cartLeft .cartItemBox {
       width: 100%;
-      background-color: aliceblue;
       padding: 20px 30px;
     }
     .cartSection .cartBox .cartLeft .cartItemBox .cart {

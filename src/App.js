@@ -3,11 +3,11 @@ import '@flaticon/flaticon-uicons/css/regular/rounded.css';
 import './App.css';
 
 import { Button, Container, Form, Nav, Navbar, Offcanvas } from 'react-bootstrap';
+import { Outlet } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
-//import { useState } from 'react';
 import { useState, useEffect } from 'react';
-//import productDate from './data/productDate';
+
 
 import Home from './pages/Home';
 import Product from './pages/Product';
@@ -23,6 +23,7 @@ function App() {
 
   const navigate = useNavigate();
   const location = useLocation();
+  const userName = localStorage.getItem('userName');
   const [showButton, setShowButton] = useState(false);
   useEffect(() => {
     const handleShowButton = () => {
@@ -34,8 +35,8 @@ function App() {
     };
 
     window.addEventListener('scroll', handleShowButton);
-    return() => {
-      window.removeEventListener('scroll',handleShowButton);
+    return () => {
+      window.removeEventListener('scroll', handleShowButton);
     };
   }, []);
 
@@ -46,12 +47,14 @@ function App() {
       behavior: 'smooth',
     });
   };
+
+
   return (
     <div className="App">
       {
         showButton && (
-          <div style={{position: 'fixed', bottom: '60px', right: '50px', zIndex: 100}}>
-            <button onClick={scrollToTop} style={{ width: '50px', height: '50px', backgroundColor: '#008BE5', color: 'white', borderRadius: '50%', border: 'none', fontSize: '20px'}}>
+          <div style={{ position: 'fixed', bottom: '60px', right: '50px', zIndex: 100 }}>
+            <button onClick={scrollToTop} style={{ width: '50px', height: '50px', backgroundColor: '#008BE5', color: 'white', borderRadius: '50%', border: 'none', fontSize: '20px' }}>
               Top
             </button>
           </div>
@@ -104,18 +107,34 @@ function App() {
                   placeholder="Search"
                   className="me-2"
                   aria-label="Search"
-                  style={{borderRadius: '20px'}}
+                  style={{ borderRadius: '20px' }}
                 />
                 <Button className='searchbtn'>검색</Button>
               </Form>
-              <button className='loginbtn' onClick={() => navigate('/login')}>
-                <i className="fi fi-rr-user" style={{ fontSize: '30px', lineHeight:'20px' }}></i>
-              </button>
+              {localStorage.getItem('userName') ? (
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginLeft: '10px' }}>
+                  <span style={{ fontSize: '15px', color: '#333', whiteSpace: 'nowrap' }}>
+                    <strong style={{color: '#666', marginLeft: '10px'}}>{localStorage.getItem('userName')}</strong>님
+                  </span>
+                  <button className='loginbtn' onClick={() => {
+                    if (window.confirm('로그아웃 하시겠습니까?')) {
+                      localStorage.removeItem('userName'); 
+                      window.location.reload();
+                    }
+                  }}>
+                    <i className="fi fi-rr-user" style={{ fontSize: '30px', lineHeight: '20px'}}></i>
+                  </button>
+                </div>
+              ) : (
+                <button className='loginbtn' onClick={() => navigate('/login')} style={{ marginLeft: '10px' }}>
+                  <i className="fi fi-rr-user" style={{ fontSize: '30px', lineHeight: '20px' }}></i>
+                </button>
+              )}
               <button className='btncart' onClick={() => navigate('/cart')}>
-                <i className="fi fi-rr-basket-shopping-simple" style={{fontSize: '30px', lineHeight: '20px'}}></i>
+                <i className="fi fi-rr-basket-shopping-simple" style={{ fontSize: '30px', lineHeight: '20px' }}></i>
               </button>
-              <button className='heartbtn' onClick={()=> navigate('/like')}>
-                <i class="fi fi-rr-heart" style={{fontSize: '30px', lineHeight: '20px'}}></i>
+              <button className='heartbtn' onClick={() => navigate('/like')}>
+                <i class="fi fi-rr-heart" style={{ fontSize: '30px', lineHeight: '20px' }}></i>
               </button>
             </Offcanvas.Body>
           </Navbar.Offcanvas>

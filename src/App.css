@@ -48,7 +48,7 @@ p {
   font-weight: bold;
 }
 .searchbtn {
-  width: 80px !important;
+  width: 80px;
   border-radius: 20px !important;
   border: 1px solid #008be5 !important;
   background-color: white !important;
@@ -71,6 +71,7 @@ p {
   justify-content: center;
   align-items: center;
   margin: 0 10px;
+  color: #666;
 }
 .loginbtn:hover {
   color: #008BE5;
@@ -87,6 +88,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #666;
 }
 .btncart:hover {
   color: #008BE5;
@@ -102,6 +104,7 @@ p {
   justify-content: center;
   align-items: center;
   margin: 0 10px;
+  color: #666;
 }
 .heartbtn:hover {
   color: #008BE5;

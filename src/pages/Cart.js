@@ -3,12 +3,49 @@ import '../style/cart.css'
 import productDate from '../data/productDate';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteItem, addCount, subCount, addItem } from './store';
+import { useMemo, useState } from 'react';
 
 export default function Cart() {
 
   const cartAddImg = productDate.cartAddItem;
   const state = useSelector((state => state));
   const dispatch = useDispatch();
+  const [checkedItems, setCheckedItems] = useState([]);
+
+  const isAllChecked = state.cart.length > 0 && checkedItems.length === state.cart.length;
+
+  const handleAllCheck = (checked) => {
+    if (checked) {
+      const idArray = state.cart.map((item) => item.id);
+      setCheckedItems(idArray);
+    } else {
+      setCheckedItems([]);
+    }
+  };
+
+  const handleCheck = (checked, id) => {
+    if (checked) {
+      setCheckedItems((prev) => [...prev, id]);
+    } else {
+      setCheckedItems((prev) => prev.filter((item) => item !== id));
+    }
+  };
+
+  const totalProductPrice = useMemo(() => {
+    if (!state.cart) return 0;
+    return state.cart.reduce((sum, item) => sum + (item.price * (item.count || 1)), 0);
+  }, [state.cart]);
+
+  const shippingFee = useMemo(() => {
+    if (totalProductPrice === 0 || totalProductPrice >= 30000) return 0;
+    return 3000;
+  }, [totalProductPrice]);
+
+  const totalDiscount = 0;
+
+  const finalPaymentAmount = totalProductPrice - totalDiscount + shippingFee;
+
+
   return (
     <div>
       <div className="cartSection">
@@ -61,7 +98,7 @@ export default function Cart() {
           <div className="cartLeft">
             <div className="cartTop">
               <div className="allChkBox">
-                <input type="checkbox" id="allChk" />
+                <input type="checkbox" id="allChk" checked={isAllChecked} onClick={(e)=>handleAllCheck(e.target.checked)} />
                 <label htmlFor="allChk">전체선택</label>
               </div>
               <p>장바구니 보관기간은 30일입니다.</p>
@@ -75,8 +112,9 @@ export default function Cart() {
                       <div className="cartImg">
                         <input
                           type="checkbox"
-                          name=""
-                          id="cartItemChk"
+                          id={`cartItemChk_${item.id}`}
+                          checked={checkedItems.includes(item.id)}
+                          onChange={(e)=>handleCheck(e.target.checked, item.id)}
                         />
 
                         <img
@@ -151,7 +189,7 @@ export default function Cart() {
               </p>
               <div className="cartTxt01">
                 <p className='text01'>총 상품 금액</p>
-                <p className='text02'>84,800원</p>
+                <p className='text02'>{totalProductPrice.toLocaleString()}원</p>
               </div>
               <p className='cartPriceTitle02'>
                 총 할인 금액
@@ -177,7 +215,7 @@ export default function Cart() {
               <hr />
               <div className="cartTxt04">
                 <p>총 결제예정 금액</p>
-                <p><span>84,800</span>원</p>
+                <p><span>{finalPaymentAmount.toLocaleString()}</span>원</p>
               </div>
               <div className="cartTxt05">
                 <div className="text05">
@@ -194,11 +232,11 @@ export default function Cart() {
               전체상품주문
             </button>
             <div className='payBtn'>
-              <button>
+              <button onClick={()=> alert('선물을 하시겠습니까?')}>
                 <img src={process.env.PUBLIC_URL + '/assets/gift.png'} alt="" />
                 선물하기
               </button>
-              <button>
+              <button onClick={()=>alert('선택하신 상품을 주문하시겠습니까?')}>
                 선택상품주문
               </button>
             </div>

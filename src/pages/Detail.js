@@ -218,11 +218,11 @@ export default function Detail() {
                 구매하기
               </button>
               <div className="buySubBtn">
-                <button className='buyCartBtn'>
+                <button className='buyCartBtn' style={{border: '1px solid #ccc'}}>
                   장바구니 담기
                 </button>
-                <button className='buyGiftBtn'>
-                  <img src={process.env.PUBLIC_URL + '/assets/gift.png'} alt="" />선물하기
+                <button className='buyGiftBtn' style={{border: '1px solid #ccc'}}>
+                  <img src={process.env.PUBLIC_URL + '/assets/gift.png'} alt=""  style={{marginRight: '5px', marginBottom: '5px'}}/>선물하기
                 </button>
               </div>
             </div>
