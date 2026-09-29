@@ -8,7 +8,7 @@
 ### 경쟁사 분석 & 인사이트 
 
 ### 구현화면
-<img width="1450" height="580" alt="banner" src="https://github.com/user-attachments/assets/c64d1034-7055-4d0b-b98d-6d31dc2d7fa1" />
+<img width="1280" height="580" alt="banner" src="https://github.com/user-attachments/assets/c64d1034-7055-4d0b-b98d-6d31dc2d7fa1" />
 
 
 ## 사용한 기술(Tech Stack)
