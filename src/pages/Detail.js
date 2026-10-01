@@ -2,7 +2,7 @@ import React from 'react';
 import '../style/detail.css';
 import { useParams } from 'react-router-dom';
 import productData from '../data/productDate';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 
@@ -11,7 +11,9 @@ export default function Detail() {
   const { id } = useParams();
   const { data } = productData;
 
-  const product = data.find((item) => String(item.id) === String(id)) || {};
+  const product = useMemo(() => {
+  return data?.find((item) => String(item.id) === String(id)) || {};
+}, [data, id]);
 
   const [mainImage, setMainImage] = useState(product ? product.image : '');
 
@@ -92,15 +94,29 @@ export default function Detail() {
   };
 
   const matchedReviews = productData.reviews
-    ? productData.reviews.filter((review) => review.productId === id)
+    ? productData.reviews.filter((review) => review.productId.includes(id))
     : [];
-  const tabs = ['상세정보', `상품후기 ${matchedReviews.length}`, '상품문의 16', '배송/교환/환불 안내'];
-  const [activeTab, setActiveTab] = useState(1);
+  //const tabs = ['상세정보', `상품후기 ${matchedReviews.length}`, '상품문의 16', '배송/교환/환불 안내'];
+  //const [activeTab, setActiveTab] = useState(1);
   const renderStars = (rating) => {
     return '★'.repeat(rating) + '☆'.repeat(5 - rating);
   };
 
-  const [qandaBox, setQandaBox] = useState(productData?.qanda || []);
+  const [qandaBox] = useState(productData?.qanda || []);
+
+  useEffect(() => {
+    if (productData && (!productData.mainOptions || !productData.mainOptions.length === 0)) {
+      const defaultItem = {
+        key: `default-${productData.id || 'product'}`,
+        mainName: productData.title,  
+        subName: '',
+        extraPrice: 0,
+        count: 1
+      };
+      setSelectedItems([defaultItem])
+      };
+    }, [product, setSelectedItems]);
+
   return (
     <div>
       <div className="detailSection">
@@ -284,15 +300,12 @@ export default function Detail() {
                           </span>
                         )}
                       </div>
-                      <div style={{padding: '10px 0'}}>
-                        <span>상품 ID: {review.productId}</span>
-                      </div>
                       <p className="text-sm text-gray-600 leading-relaxed">
                         {review.content}
                       </p>
                       {review.images && review.images.length > 0 && (
                         <div>
-                          <img src={review.images[0]} alt="Review image" style={{ width: '150px', height: '150px', borderRadius: '10px', margin: '10px 0' }} />
+                          <img src={review.images[0]} alt="Review_image" style={{ width: '150px', height: '150px', borderRadius: '10px', margin: '10px 0' }} />
                         </div>
                       )}
                       <div style={{padding: '10px 0'}}>
