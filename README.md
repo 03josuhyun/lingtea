@@ -15,3 +15,5 @@
  - FrontEnd : React, HTML, CSS, JavaScript
  - Styling : Styled-components
  - Deployment : GitHub Pages
+
+
