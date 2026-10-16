@@ -30,4 +30,21 @@
  - Styling : Styled-components
  - Deployment : GitHub Pages
 
+## 프로젝트 구조(Architecture)
 
+### 1. 디렉토리 구조 (Directory Structure)
+컴포넌트의 재사용성과 유지보수성을 극대화하기 위해 기능 및 역할별로 폴더를 구조화했습니다.
+```text
+src/
+├── assets/          # 이미지, 아이콘 등 정적 파일 관리
+├── components/      # 메인, 네비게이션 등 공통 및 세부 UI 컴포넌트
+│   ├── Main/        # 메인 배너 및 슬라이더 컴포넌트
+│   ├── Navigation/  # 스마트 헤더 및 네비게이션 컴포넌트
+│   └── Products/    # 상품 목록 및 카테고리 탭 컴포넌트
+├── pages/           # 라우터와 1:1 매핑되는 페이지 단위 컴포넌트
+│   ├── Home.jsx     # 메인 랜딩 페이지
+│   ├── Best.jsx     # 베스트 셀러 페이지
+│   └── Event.jsx    # 이벤트 프로모션 페이지
+├── App.js           # 전역 상태 정의 및 라우터 설정 구성
+└── index.js         # 애플리케이션 진입점
+```
