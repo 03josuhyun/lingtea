@@ -77,6 +77,7 @@ src/
 
 
 ## 코드 리뷰 (Code Review)
+### 1. useState를 사용한 탭 전환 기능
 ```javascript
 import { useState } from 'react';
 
@@ -107,10 +108,26 @@ export default function Home() {
 * **useState** : 현재 선택한 제품 카테고리 상태 관리
 * **onClick** : 카테고리 버튼 클릭 시 setActiveTab()을 호출하여 선택된 카테고리 상태를 변경
 * **className** : actuveTab의 값에 따라 on 클래스를 적용하여 선택된 탭의 활성화 스타일을 표시
-* **조건부 렌더링** : activeTab의 값에 따라 해당 카테고리의 콘텐츠만 표시
+* **조건부 렌더링(&&)** : activeTab의 값에 따라 해당 카테고리의 콘텐츠만 표시
 페이지 이동없이 하나의 영역에서 여러 제품 카테고리를 전환하며 확인할 수 있도록 구현했습니다. 또한 선택된 카테고리를 상태로 관리하여 버튼의 활성화 스타일과 콘텐츠가 함께 변경되도록 했습니다.
 
-
+### 2. map()과 slice()를 이용한 상품 출력
+```javascript
+<div className="bestBox">
+          {
+            bestProducts.slice(0, 4).map((product) => (
+              <ProductCard
+                key={product.id}
+                product={product}
+                onCartClick={(prod) => dispatch(addItem({ ...prod, count: 1 }))}
+              />
+            ))
+          }
+</div>
+```
+상품 데이터를 반복해서 출력하고, 베스트 상품영역에 최대 4개의 상품만 표시하기 위해 slice()와 map()을 사용했습니다.
+* **slice(0,4)** : 상품 배열에서 인덱스 0~3까지, 앞의 4개 상품을 선택합니다. 원본 배열은 변경하지 않습니다.
+*  **map()** : 선택된 상품 데이터를 하나씩 순회하며 ProductCard 컴포넌트를 생성합니다.
 
 ### 실행 방법 (Getting Started)
 1. 이 저장소를 클록(clone)하거나 Zip 파일로 다운로드합니다.
