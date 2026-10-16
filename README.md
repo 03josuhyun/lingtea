@@ -103,7 +103,16 @@ export default function Home() {
 
 ### 실행 방법 (Getting Started)
 1. 이 저장소를 클록(clone)하거나 Zip 파일로 다운로드합니다.
-2. 폴더 내의 `index.html` 파일을 더블 클릭하여 웹 브라우저에서 실행합니다.
+2. 터미널(Terminal)을 열고 해당 프로젝트 폴더로 이동합니다.
+3. 프로젝트에 필요한 패키지들을 설치합니다.
+   ```text
+   npm install
+   ```
+5. 로컬 개발 서버를 실행하여 웹 브라우저에서 확인합니다.
+   ```text
+   npm start
+   ```
+7. 브라우저에서 https://localhost:3000(또는 터미널에서 표시된 주소)로 접속하여 확인합니다.
 
 ### 🔗 배포 링크 (Live Demo)
 [링티 리뉴얼 사이트 바로가기](https://03josuhyun.github.io/lingtea/)
