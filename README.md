@@ -18,8 +18,6 @@
 * **네비게이션 및 사용자 편의기능**
   * 쇼핑 편의성을 높이기 위해 홈, 브랜드, 베스트, 이벤트 등 주요 메뉴로 이동하는 라우팅 시스템 구축
   * 원하는 제품을 빠르게 찾을 수 있는 검색창 위치 노출 및 페이지 최상단으로 부드럽게 이동하는 TOP 버튼 제공
- 
-### 경쟁사 분석 & 인사이트 
 
 ### 구현화면
 <img width="1280" alt="banner" src="https://github.com/user-attachments/assets/c64d1034-7055-4d0b-b98d-6d31dc2d7fa1" />
@@ -76,3 +74,26 @@ src/
 * **`react-bootstrap`**: UI 생산성 향상 및 컴포넌트 활용
   * `Offcanvas`: 슬라이드 아웃 방식의 사이드바/메뉴 구현
   * `Crossfade`: 부드러운 페이드 이펙트 효과 적용
+
+
+## 코드 리뷰 (Code Review)
+```text
+import { useState } from 'react';
+export default function Home() {
+  const { data: bestProducts, tabData, eventInfo } = productDate;
+  const [activeTab, setActiveTab] = useState('recovery');
+}
+<button
+  className={activeTab === 'recovery' ? 'on' : ''}
+  onClick={() => setActiveTab('recovery')}
+>
+  회복솔루션
+</button>
+{activeTab === 'recovery' && (
+  <div className="sheet">
+    {/* 회복솔루션 콘텐츠 */}
+  </div>
+)}
+```
+
+
