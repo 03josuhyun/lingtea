@@ -77,28 +77,40 @@ src/
 
 
 ## 코드 리뷰 (Code Review)
-```text
+```javascript
 import { useState } from 'react';
+
 export default function Home() {
-  const { data: bestProducts, tabData, eventInfo } = productDate;
   const [activeTab, setActiveTab] = useState('recovery');
+  const { bestProducts, tabData, eventInfo } = productData; // 오타 수정: Data
+
+  return (
+    <div>
+      {/* 카테고리 탭 버튼 */}
+      <button 
+        className={activeTab === 'recovery' ? 'on' : ''} 
+        onClick={() => setActiveTab('recovery')}
+      >
+        회복솔루션
+      </button>
+
+      {/* 조건부 콘텐츠 렌더링 */}
+      {activeTab === 'recovery' && (
+        <div className="sheet">
+          {/* 회복솔루션 콘텐츠 */}
+        </div>
+      )}
+    </div>
+  );
 }
-<button
-  className={activeTab === 'recovery' ? 'on' : ''}
-  onClick={() => setActiveTab('recovery')}
->
-  회복솔루션
-</button>
-{activeTab === 'recovery' && (
-  <div className="sheet">
-    {/* 회복솔루션 콘텐츠 */}
-  </div>
-)}
 ```
-### **사용목적**
-사용자가 원하는 제품 카테고리를 선택하면 해당 카테고리의 콘텐츠가 표시되도록 구현하기 위해 사용했다.
-### **주요코드**
-위의 1) 상태 선언, 2) 버튼 클릭 이벤트, 3) 조건부 렌더링 코드를 각각 배치
+사용자가 원하는 제품 카테고리를 선택하면 해당 카테고리의 콘텐츠가 표시되도록 구현하기 위해 사용했습니다.
+* useState : 현재 선택한 카테고리 상태 관리
+* onClick : 버튼 클릭 시 상태 변경
+* className : 선택된 탭의 활성화 스타일 적용
+* 조건부 렌더링 : 선택된 카테고리에 맞는 콘텐츠 표시
+페이지를 이동하지 않고 하나의 영역에서 여러 제품 카테고리를 전환해 볼 수 있도록 하기 위해 사용했습니다.
+
 
 
 ### 실행 방법 (Getting Started)
