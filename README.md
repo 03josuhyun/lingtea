@@ -159,6 +159,56 @@ return {
 <br>
 상품 카드에서 장바구니 추가 기능을 실행하고, 선택한 상품 정보를 Redux 스토어에서 관리할 수 있도록 구현했습니다. 이를 통해 상품 화면과 장바구니의 상태를 연결했습니다.
 
+### 4. useNavigate를 이용한 페이지 이동
+```javascript
+import { useNavigate, useLocation } from "react-router-dom";
+export default funtion Home() {
+ const navigate = useNavigate();
+
+return (
+  <button className='bestAdd' onClick={() => navigate('/best')}>
+   전체보기
+  </button>
+  )
+}
+```
+
+### 5. 이벤트 캐러셀의 상태 관리
+```javascript
+export default function Home() {
+const [startIndex, setStartIndex] = useState(0);
+
+return (
+ <div className="eventBox">
+          <button className='event_prev' onClick={() => setStartIndex(prev => Math.max(0, prev - 1))}>
+            <i className="fi fi-rr-angle-left" style={{fontSize: '32px'}}></i>
+          </button>
+          <div className="event">
+            {
+              eventInfo && eventInfo.slice(startIndex, startIndex + 3).map((event) => {
+                return (
+                  <div className="eventItem" key={event.id}>
+                    <div className="eventImg">
+                      <img src={event.image} alt={event.name} />
+                    </div>
+                    <p className='eventName'>{event.name}</p>
+                    <span className='eventDay'>{event.day}</span>
+                  </div>
+                )
+              })
+            }
+          </div>
+          <button className='event_next' onClick={() => setStartIndex(prev => {
+        if (eventInfo && prev + 3 < eventInfo.length) {
+          return prev + 1;
+        }
+        return prev;
+      })}>
+            <i className="fi fi-rr-angle-right" style={{fontSize: '32px'}}></i>
+          </button>
+        </div>
+)
+```
     
 ### 실행 방법 (Getting Started)
 1. 이 저장소를 클록(clone)하거나 Zip 파일로 다운로드합니다.
