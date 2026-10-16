@@ -36,15 +36,43 @@
 컴포넌트의 재사용성과 유지보수성을 극대화하기 위해 기능 및 역할별로 폴더를 구조화했습니다.
 ```text
 src/
-├── assets/          # 이미지, 아이콘 등 정적 파일 관리
-├── components/      # 메인, 네비게이션 등 공통 및 세부 UI 컴포넌트
-│   ├── Main/        # 메인 배너 및 슬라이더 컴포넌트
-│   ├── Navigation/  # 스마트 헤더 및 네비게이션 컴포넌트
-│   └── Products/    # 상품 목록 및 카테고리 탭 컴포넌트
-├── pages/           # 라우터와 1:1 매핑되는 페이지 단위 컴포넌트
-│   ├── Home.jsx     # 메인 랜딩 페이지
-│   ├── Best.jsx     # 베스트 셀러 페이지
-│   └── Event.jsx    # 이벤트 프로모션 페이지
-├── App.js           # 전역 상태 정의 및 라우터 설정 구성
-└── index.js         # 애플리케이션 진입점
+├── index.js          # 애플리케이션 진입점
+├── App.js            # 전역 라우터 설정 및 전체 레이아웃 구성
+├── Header            # 상단 글로벌 네비게이션 바 컴포넌트
+├── Footer            # 하단 푸터 정보 컴포넌트
+├── pages/            # 주소(URL)와 1:1 매칭되는 페이지 컴포넌트
+│   ├── Home.js       # 메인 화면
+│   ├── Product.js    # 전 제품 소개 화면 (내부적으로 id.ProductTab 연동)
+│   ├── Detail.js     # 제품 상세 보기 화면
+│   ├── Cart.js       # 장바구니 화면
+│   ├── Brand.js      # 브랜드 스토리 화면
+│   └── Login.js      # 로그인 화면
+├── App.css           # 전역 스타일 및 공통 레이아웃 스타일
+│   ├── header.css    # 헤더 전용 스타일
+│   └── footer.css    # 푸터 전용 스타일
+├── style-css/        # 각 페이지별 개별 CSS 스타일 관리
+│   ├── Home.css / Brand.css / Cart.css
+│   └── Login.css / Product.css / Detail.css
+├── style-components/ # 재사용 가능한 스타일링된 독립 컴포넌트
+│   └── productcard.js # 상품 카드 레이아웃 컴포넌트
+├── components/       # 페이지 내에서 재사용되는 UI 컴포넌트
+│   └── ProductTab.js # 제품 목록 카테고리 탭 컴포넌트
+└── data/             # 로컬 Mock 데이터 관리 (JSON 파일)
+    └── product.json / customer.json / review.json / Q&A.json
 ```
+
+### 2. 라우터 구조 (Router Struture)
+`react-router-dom`을 활용하여 클라이언트 사이드 라우팅(CSR)을 구현했으며, 사용자 중심의 직관적인 URL 체계를 구축했습니다.
+
+* `/` : 메인 배너 및 베스트 상품을 보여주는 홈 화면 (`Home.js`)
+* `/brand` : 링티 브랜드 스토리 소개 화면 (`Brand.js`)
+* `/product` : 건강 목적별 전 제품 카테고리 리스트 화면 (`Product.js`)
+* `/detail` : 선택한 상품의 상세 정보 및 리뷰 확인 화면 (`Detail.js`)
+* `/cart` : 사용자가 담은 상품 목록 및 수량 조절 화면 (`Cart.js`)
+* `/login` : 회원 로그인 화면 (`Login.js`)
+
+### 사용 라이브러리 (Dependencies)
+* **`react-router-dom`**: 화면 전환 없는 SPA 라우팅 구현
+* **`react-bootstrap`**: UI 생산성 향상 및 컴포넌트 활용
+  * `Offcanvas`: 슬라이드 아웃 방식의 사이드바/메뉴 구현
+  * `Crossfade`: 부드러운 페이드 이펙트 효과 적용
