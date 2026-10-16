@@ -82,7 +82,6 @@ import { useState } from 'react';
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState('recovery');
-  const { bestProducts, tabData, eventInfo } = productData; // 오타 수정: Data
 
   return (
     <div>
@@ -105,10 +104,10 @@ export default function Home() {
 }
 ```
 사용자가 원하는 제품 카테고리를 선택하면 해당 카테고리의 콘텐츠가 표시되도록 구현하기 위해 사용했습니다.
-* useState : 현재 선택한 카테고리 상태 관리
-* onClick : 버튼 클릭 시 상태 변경
-* className : 선택된 탭의 활성화 스타일 적용
-* 조건부 렌더링 : 선택된 카테고리에 맞는 콘텐츠 표시
+* **useState** : 현재 선택한 카테고리 상태 관리
+* **onClick** : 버튼 클릭 시 상태 변경
+* **className** : 선택된 탭의 활성화 스타일 적용
+* **조건부 렌더링** : 선택된 카테고리에 맞는 콘텐츠 표시
 페이지를 이동하지 않고 하나의 영역에서 여러 제품 카테고리를 전환해 볼 수 있도록 하기 위해 사용했습니다.
 
 
