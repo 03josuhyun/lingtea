@@ -135,6 +135,31 @@ export default function Home() {
 <br>
 베스트 상품을 하나씩 직접 작성하는 대신 상품 데이터를 반복 출력하여 코드 중복을 줄이고, 베스트 상품 영역에 보여줄 상품 수를 4개로 제한했습니다. 또한 상품 데이터를 컴포넌트에 전달하여 상품 표시와 장바구니 기능을 연결했습니다. 
 
+### 3. Redux를 이용한 장바구니 연결
+```javascript
+import { addItem } from './store';
+import { useDispatch } from 'react-redux';
+export default function Home() {
+const dispatch = useDispatch();
+}
+return {
+<ProductCard
+  key={product.id}
+  product={product}
+  onCartClick={(prod) => dispatch(addItem({ ...prod, count: 1 }))}
+/>
+}
+```
+베스트 상품 카드에서 장바구니 추가 기능을 실행하고, 선택한 정보를 Redux 스토어에 전달하기 위해 useDispatch와 addItem을 사용했습니다.
+* **useDispatch()** : Redux 스토어에 액션을 전달하기 위한 함수를 가져옵니다.
+* **addItem()** : 장바구니에 상품을 추가하기 위한 액션을 생성합니다.
+* **onCartClick** : 상품 카드에서 장바구니 버튼을 클릭했을 때 실행할 함수를 전달합니다.
+* **{...prod, count:1}** : 기존 상품 정보는 유지하면서 상품 수량을 1로 지정한 객체를 생성합니다.
+*  **dispatch()** : 생성한 addItem 액션을 Redux 스토어에 전달합니다.
+<br>
+상품 카드에서 장바구니 추가 기능을 실행하고, 선택한 상품 정보를 Redux 스토어에서 관리할 수 있도록 구현했습니다. 이를 통해 상품 화면과 장바구니의 상태를 연결했습니다.
+
+    
 ### 실행 방법 (Getting Started)
 1. 이 저장소를 클록(clone)하거나 Zip 파일로 다운로드합니다.
 2. 터미널(Terminal)을 열고 해당 프로젝트 폴더로 이동합니다.
