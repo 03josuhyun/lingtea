@@ -78,6 +78,10 @@ src/
 
 ## 코드 리뷰 (Code Review)
 ### 1. 사용자가 원하는 제품 카테고리를 선택하면 해당 카테고리의 콘텐츠가 표시되도록 구현하기 위해 UseState를 사용했습니다.
+<p align= "left">
+ <img width="1208" height="634" alt="ezgif com-gif-maker (2)" src="https://github.com/user-attachments/assets/b6b19ab3-9320-4d14-9065-fb6959a23423" />
+</p>
+
 ```javascript
 import { useState } from 'react';
 
