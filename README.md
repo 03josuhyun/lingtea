@@ -115,6 +115,10 @@ export default function Home() {
 
 
 ### 2. 상품 데이터를 반복해서 출력하고, 베스트 상품영역에 최대 4개의 상품만 표시하기 위해 slice()와 map()을 사용했습니다.
+<p align="left">
+ 
+</p>
+
 ```javascript
 <div className="bestBox">
           {
